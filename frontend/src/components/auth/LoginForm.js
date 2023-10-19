@@ -76,8 +76,9 @@ const LogInForm = ({ navigate }) => {
             Login
           </button>
         </form>
-          <p>Forgotten password?</p>
-          <a>Click here</a>
+        <div className='inner_bottom'>
+          <p className='reminder_msg'>Forgotten password? Click here</p>
+        </div>
             
         
       </div>

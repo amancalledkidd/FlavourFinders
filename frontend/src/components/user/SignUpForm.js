@@ -92,8 +92,10 @@ const SignUpForm = ({ navigate }) => {
                 Register
               </button>
             </form>
-              <p>Already Have an Account?</p>
+            <div>
+              <p className="reminder_msg">Already Have an Account?</p>
               <a>Login</a>
+            </div>
                 
             
           </div>

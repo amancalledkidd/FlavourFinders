@@ -59,5 +59,14 @@ input {
   border-radius: 5px;
 }
 
+.inner_bottom{
+  padding-top: 30px;
+}
 
+.reminder_msg{
+  font-size: 13px;
+}
 
+/* p{
+  font-size: 5px;
+} */
