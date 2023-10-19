@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import lock from "/Users/MakersAdmin/FlavourFinderProject/FlavourFinders/frontend/src/components/images/password.jpg";
-import user from "/Users/MakersAdmin/FlavourFinderProject/FlavourFinders/frontend/src/components/images/user.jpg";
-import envelope from "/Users/MakersAdmin/FlavourFinderProject/FlavourFinders/frontend/src/components/images/envelope.jpg";
-import background from "/Users/MakersAdmin/FlavourFinderProject/FlavourFinders/frontend/src/components/images/abstract_background.jpg";
+import lock from "../images/password.jpg";
+import user from "../images/user.jpg";
+import envelope from "../images/envelope.jpg";
+import background from "../images/background.jpg";
 const SignUpForm = ({ navigate }) => {
   const [name, setName] = useState()
   const [email, setEmail] = useState("");
@@ -40,8 +40,8 @@ const SignUpForm = ({ navigate }) => {
 
 
     return (
-      <div>
-        <img  className="background_image"/>  
+      <div className='big_background'> 
+          {/* <img src={background} className="image_icons" alt="Girl in a jacket"/> */}
         <div className="inner_background" >
           <div className="text_color">
             <h1 id="registration">Register</h1>
@@ -98,7 +98,8 @@ const SignUpForm = ({ navigate }) => {
             
           </div>
         </div>
-    </div>
+        </div>
+    
   );
 }
 

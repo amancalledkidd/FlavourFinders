@@ -1,24 +1,4 @@
-body {
-  display: flex;
-    justify-content: center;
-    /* background-image: url('/src/styling/images/colorful-abstract-background-with-colors-rainbow_14117-15050.jpg');  */
-    background-size: cover;
-}
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-.background_image::before{
-  /* background-image: url('/src/styling/images/colorful-abstract-background-with-colors-rainbow_14117-15050.jpg'); */
-  opacity: 0.5;
-  height: 500px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: ;
-}
 
 .inner_background{
   display: flex;
@@ -33,6 +13,17 @@ code {
   font-size: 20px;
   border-style: solid;
   border-width: 2px;
+  color: rgb(49, 49, 84);
+}
+
+body{
+  display: flex;
+  justify-content: center;  
+  
+
+}
+
+input{
   color: rgb(49, 49, 84);
 }
 
@@ -68,6 +59,5 @@ input {
   border-radius: 5px;
 }
 
-.image_icons{
-  padding-right: 20px;
-}
+
+
