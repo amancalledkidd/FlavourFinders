@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import Recipe from "../recipe/recipe";
 
-const Generator = () => {
+const Generator = ({ navigate }) => {
     const [formInput, setformInput] = useState("")
+    const [generatorRecipe, setGeneratorRecipe] = useState("")
 
     const handleFormChange = (event) => {
         setformInput(event.target.value)
@@ -15,8 +17,10 @@ const Generator = () => {
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify({ prompt: formInput })
         })
-        .then(response => {
-            console.log(response)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data.message)
+            setGeneratorRecipe(data.message)
             setformInput('')
         })
     }
@@ -32,6 +36,10 @@ const Generator = () => {
             <br/>
             <input id="submit "type="submit" value="Generate Recipe" />
         </form>
+
+        { generatorRecipe && 
+            <Recipe recipe={generatorRecipe}/>
+        }
         </>
     )
 }

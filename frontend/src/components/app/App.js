@@ -9,6 +9,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import Recipe from '../recipe/recipe';
 
 const App = () => {
     return (
@@ -17,6 +18,7 @@ const App = () => {
           <Route path='/login'  element={<LoginForm  navigate={ useNavigate() }/>}/>
           <Route path='/signup' element={<SignUpForm navigate={ useNavigate() }/>}/>
           <Route path='/generator' element={<Generator navigate={ useNavigate() }/>}/>
+          <Route path='/recipe' element={<Recipe navigate={ useNavigate()}/>}/>
         </Routes>
     );
 }
