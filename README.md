@@ -1,16 +1,39 @@
-# Acebook
+# Recipe Generator
+Recipe Generator is a WebApp that will generate recipe for user based on the available ingredients as their input & other provided requirements.
 
-In this project, you are tasked with working on an existing application. A significant part of the challenge will be to familiarise yourself with the codebase you've inherited, as you work to **improve and extend** it.
 
-## Documentation
+## 🤝 Our Team
+👨‍💻 **[Alex Wilson](https://github.com/APWilson97)**
+👩‍💻 **[Janna Limpin](https://github.com/dr3amcoder)**
+👩‍💻 **[Judith Baidoo](https://github.com/Judithbaidoo)**
+👨‍💻 **[Khalifa Fadel](https://github.com/kmf0208)**
+👨‍💻 **[Kumani Kidd](https://github.com/amancalledkidd)**
+👩‍💻 **[Lily Burton](https://github.com/LilyBurton)**
 
-[More documentation of the codebase and its architecture can be found here.](./DOCUMENTATION.md) It's recommended you all read this _after making sure the whole setup below worked for everyone_. Then work together on a diagram describing how the application works.
 
-[A template Miro board for your diagrams can be found here.](https://miro.com/app/board/uXjVPqNzFfc=/?share_link_id=360271550320) Make sure your validate your diagrams with your coach.
+## 🚀 Tech stack
+Frontend:
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 
-## Card wall
+Backend
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 
-REPLACE THIS TEXT WITH A LINK TO YOUR CARD WALL
+
+## Planning
+🗃 Documentation
+https://github.com/amancalledkidd/FlavourFinders/blob/main/DOCUMENTATION.md
+
+🎨 Miro:
+https://miro.com/app/board/uXjVNaVz6L4=/
+
+🎫 Trello
+https://trello.com/b/HSR93dPz/tickets
 
 ## Quickstart
 
