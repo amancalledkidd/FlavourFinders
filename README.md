@@ -1,5 +1,5 @@
-# Recipe Generator
-Recipe Generator is a WebApp that will generate recipe for user based on the available ingredients as their input & other provided requirements.
+# Team: FlavourFinder
+The team has created a recipe generator webapp that will generate recipe for user based on the available ingredients as their input & other provided requirements.
 
 
 ## 🤝 Our Team
