@@ -17,7 +17,7 @@ const GeneratorController = {
                     },   
                     { "role": "user", "content": `${req.body.prompt}`}
                     ],
-                "temperature": 0.75,
+                "temperature": 0.83,
                 "max_tokens": 750,
                 "top_p": 1,
                 "frequency_penalty": 0,

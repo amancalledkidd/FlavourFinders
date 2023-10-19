@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Recipe from "../recipe/recipe";
+import Loader from "../loader/Loader";
 
 const Generator = ({ navigate }) => {
     const [mealType, setMealType] = useState("")
@@ -8,6 +9,7 @@ const Generator = ({ navigate }) => {
     const [dietaryReq, setDietaryReq] = useState("")
     const [ingredients, setIngredients] = useState("")
     const [generatorRecipe, setGeneratorRecipe] = useState("")
+    const [loading, setLoading] = useState(false)
 
     const handleMealTypeChange = (event) => {
         setMealType(event.target.value)
@@ -31,6 +33,7 @@ const Generator = ({ navigate }) => {
 
     const handleFormSubmit = (e) => {
         e.preventDefault()
+        setLoading(true)
         // change fetch url to new one 
         fetch('/generator', {
             method: "POST",
@@ -46,6 +49,7 @@ const Generator = ({ navigate }) => {
             setCuisine('')
             setIngredients('')
             setDietaryReq('')
+            setLoading(false)
         })
     }
 
@@ -54,10 +58,10 @@ const Generator = ({ navigate }) => {
         <>
         <h1> Logo </h1>
 
+        { !loading &&
         <form onSubmit={handleFormSubmit}>
             <h2> Recipe Generator </h2>
             <h3>Meal type</h3>
-            {/* <input placeholder="Please enter the type of meal" id="mealType" type="mealType" value={mealType} onChange={handleMealTypeChange} />} */}
             <select id="mealType" type="mealType" value={mealType} onChange={handleMealTypeChange}>
                 <option value="Breakfast">Breakfast</option>
                 <option value="Lunch">Lunch</option>
@@ -67,7 +71,6 @@ const Generator = ({ navigate }) => {
             <br/>
             <br/>
             <h3>Cuisine</h3>
-            {/* <input placeholder="Please enter the preferred cuisine" id="cuisine" type="cuisine" value={cuisine} onChange={handleCuisineChange} /> */}
             <select id="cuisine" type="cuisine" value={cuisine} onChange={handleCuisineChange}>
                 <option value="Any">Any</option>
                 <option value="Chinese">Chinese</option>
@@ -89,7 +92,6 @@ const Generator = ({ navigate }) => {
             <br/>
             <br/>
             <h3>Cooking Time</h3>
-            {/* <input placeholder="Please enter cooking time" id="cookingTime" type="cookingTime" value={cookingTime}  onChange={handleCookingTimeChange} /> */}
             <select id="cookingTime" type="cookingTime" value={cookingTime} onChange={handleCookingTimeChange}>
                 <option value="Up to 30 minutes">15-30 minutes</option>
                 <option value="30-45 minutes">30-45 minutes</option>
@@ -107,6 +109,11 @@ const Generator = ({ navigate }) => {
             <br/>
             <input id="submit "type="submit" value="Generate Recipe" />
         </form>
+        }
+
+        { loading && 
+            <Loader />
+        }
 
         { generatorRecipe && 
             <Recipe recipe={generatorRecipe}/>
