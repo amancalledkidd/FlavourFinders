@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from '../Navbar.js'
 import Post from '../post/Post'
+import Home from '../Home/home.js';
 
 const Feed = ({ navigate }) => {
   const [posts, setPosts] = useState([]);
@@ -26,7 +27,7 @@ const Feed = ({ navigate }) => {
     if(token) {
       return(
         <>
-          <Navbar currentPage="feed" />
+          <Navbar currentPage="feed" /> 
           <h2>Posts</h2>
           <div id='feed' role="feed">
               {posts.map(
@@ -35,7 +36,8 @@ const Feed = ({ navigate }) => {
           </div>
         </>
       )
-    } else {
+    } 
+    else {
       navigate('/login')
     }
 }

@@ -18,7 +18,7 @@ const Navbar = ({ currentPage }) => {
                 <Link className="navbar-brand" style={{ color: '#fffbff' }} to="/">FlavourFinder</Link>
                 <ul className="navbar-nav">
                     <li className="nav-item">
-                        <Link className="nav-link active fw-bold" style={{ padding: "5px", color: '#fffbff' }} to="/signup">Home</Link>
+                        <Link className="nav-link active fw-bold" style={{ padding: "5px", color: '#fffbff' }} to="/">Home</Link>
                     </li>
                     <li className="nav-item">
                         {currentPage === 'signup' || currentPage === 'login' ? (
