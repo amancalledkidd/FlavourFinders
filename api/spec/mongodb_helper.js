@@ -1,7 +1,7 @@
 var mongoose = require("mongoose");
 
 beforeAll(function (done) {
-  mongoose.connect("mongodb://127.0.0.1:27017/testFlavourFinder", {
+  mongoose.connect("mongodb://0.0.0.0/testFlavourFinder", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });

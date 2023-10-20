@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import lock from "../images/password.jpg";
 import user from "../images/user.jpg";
 import envelope from "../images/envelope.jpg";
+
+
+
 const SignUpForm = ({ navigate }) => {
   const [name, setName] = useState()
   const [email, setEmail] = useState("");
