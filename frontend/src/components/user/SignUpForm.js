@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import lock from "../images/password.jpg";
 import user from "../images/user.jpg";
 import envelope from "../images/envelope.jpg";
-import background from "../images/background.jpg";
+
+
 
 const SignUpForm = ({ navigate }) => {
   const [name, setName] = useState()
@@ -47,7 +48,7 @@ const SignUpForm = ({ navigate }) => {
           <div className="text_color">
             <h1 id="registration">Register</h1>
             <form className="register_form" onSubmit={handleSubmit}>
-              <div className="mb-3">
+              <div className="input_fields">
               <img src={user} className="image_icons" alt="Girl in a jacket" width="24" height="24"/>
                 <label id="name_title" htmlFor="name" >
                   <strong >Name</strong>
@@ -62,7 +63,7 @@ const SignUpForm = ({ navigate }) => {
                   onChange={handleNameChange}
                 />
               </div>
-              <div className="mb-3">
+              <div className="input_fields">
               <img src={envelope} className="image_icons" alt="email" width="24" height="24"/>
                 <label id="email_title" htmlFor="email">
                   <strong>Email</strong>
@@ -76,7 +77,7 @@ const SignUpForm = ({ navigate }) => {
                   onChange={handleEmailChange}
                 />
               </div>
-              <div className="mb-3">
+              <div className="input_fields">
               <img src={lock} className="image_icons" alt="Girl in a jacket" width="24" height="24"/>
                 <label id="password_title" htmlFor="password">
                   <strong>Password</strong>

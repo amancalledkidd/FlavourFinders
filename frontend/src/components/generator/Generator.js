@@ -1,6 +1,10 @@
 import React, { useState } from "react";
+
+import Navbar from "../Navbar";
+
 import Recipe from "../recipe/recipe";
 import Loader from "../loader/Loader";
+
 
 const Generator = ({ navigate }) => {
     const [token, setToken] = useState(window.localStorage.getItem("token"))
@@ -76,7 +80,8 @@ const Generator = ({ navigate }) => {
 
     return (
         <>
-        <a href="/my_recipes">My Recipes</a>
+        <Navbar/>
+
         <h1> Logo </h1>
 
         { !loading &&

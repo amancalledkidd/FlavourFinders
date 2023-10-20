@@ -4,19 +4,23 @@ import "./home.css"
 import "../generator/Generator"
 
 
+import Navbar from '../Navbar';
+
 
 function Home(){
     return (
         <>
-            {/* <Navbar currentPage="home" />  */}
-            <div className = "first-button">
-                <h1 className = "main-title">Flavor Finders</h1>
-                <h4 className = "slogan">Season the Day!</h4>
-                <button className = "popular-recipes">Don't know where to start? Click here for popular recipes!</button>
-            <div className = "second-button">
+             <Navbar/>
+            <div className = "border">
+                <h2 className = "slogan">Season the Day!</h2>
                 <Link to="/generator">
-                    <button className = "generate-recipes">Click here to generate recipes!</button>
+                <button className = "generate-recipes"><p className="recipe_text">Click here to generate recipes!</p></button>
                 </Link>
+                <div className = "second-button">
+                
+                <Link to="/popular">
+                    <button className = "popular-recipes"><p className="recipe_text">Don't know where to start?<br />Click here for popular recipes!</p></button>
+                    </Link>
             </div>
             </div>
         </>
