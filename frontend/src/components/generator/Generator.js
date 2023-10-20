@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Navbar from "../Navbar";
 
 const Generator = () => {
     const [formInput, setformInput] = useState("")
@@ -24,6 +25,7 @@ const Generator = () => {
 
     return (
         <>
+        <Navbar/>
         <h1> Logo </h1>
 
         <form onSubmit={handleFormSubmit}>
