@@ -1,6 +1,10 @@
 import React, { useState } from "react";
+
+import Navbar from "../Navbar";
+
 import Recipe from "../recipe/recipe";
 import Loader from "../loader/Loader";
+
 
 const Generator = ({ navigate }) => {
     const [mealType, setMealType] = useState("")
@@ -56,6 +60,7 @@ const Generator = ({ navigate }) => {
 
     return (
         <>
+        <Navbar/>
         <h1> Logo </h1>
 
         { !loading &&
