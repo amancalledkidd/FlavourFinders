@@ -61,7 +61,7 @@ const AuthenticatedNav = () => {
               NewGenerate
             </button>
           </Link>
-          <Link to="/recipe">
+          <Link to="/my_recipes">
             <button style={{ ...buttonStyle, ...{ backgroundColor: '#fffbff', color: '#3a405a' } }} className="authenticated-button posts-button">
               MyRecipes
             </button>
