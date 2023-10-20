@@ -4,11 +4,13 @@ import "./home.css"
 import "../generator/Generator"
 
 
+import Navbar from '../Navbar';
+
 
 function Home(){
     return (
         <>
-            {/* <Navbar currentPage="home" />  */}
+             <Navbar/>
             <div className = "border">
                 <h2 className = "slogan">Season the Day!</h2>
                 <Link to="/generator">
