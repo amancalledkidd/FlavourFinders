@@ -34,10 +34,17 @@ input{
   justify-content: center;
 }
 
-#password_input, #name_input, #email_input {
+#name_input, #email_input {
   margin-right: 30px;
   width: 175px;
   padding-right: 100px;
+}
+
+#password_input {
+  margin-right: 30px;
+  width: 175px;
+  padding-right: 100px;
+  margin-right: 50px;
 }
 
 #password_title {
@@ -54,19 +61,33 @@ input {
 }
 
 .register_button{
-  height: 30px;
-  width: 80px;
+  margin-right: 160px;
+  height: 60px;
+  width: 100px;
   border-radius: 5px;
+  /* padding: 20px; */
 }
 
 .inner_bottom{
   padding-top: 30px;
+  
 }
 
 .reminder_msg{
   font-size: 13px;
+  text-align: center;
+  margin-left: 100px;
+  margin: 0px;
+  position: absolute;
+  right: 590px;
+  bottom: 195px;
 }
 
-/* p{
-  font-size: 5px;
-} */
+.link {
+  font-size: 13px;
+  margin: 0px;
+  position: absolute;
+  right: 555px;
+  bottom: 195px;
+}
+
