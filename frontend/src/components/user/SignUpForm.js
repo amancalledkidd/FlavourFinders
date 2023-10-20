@@ -3,6 +3,7 @@ import lock from "../images/password.jpg";
 import user from "../images/user.jpg";
 import envelope from "../images/envelope.jpg";
 import background from "../images/background.jpg";
+
 const SignUpForm = ({ navigate }) => {
   const [name, setName] = useState()
   const [email, setEmail] = useState("");
