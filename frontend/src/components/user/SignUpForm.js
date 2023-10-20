@@ -16,7 +16,7 @@ const SignUpForm = ({ navigate }) => {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ email: email, password: password })
+      body: JSON.stringify({ name: name, email: email, password: password })
     })
       .then(response => {
         if(response.status === 201) {
@@ -47,8 +47,8 @@ const SignUpForm = ({ navigate }) => {
             <h1 id="registration">Register</h1>
             <form className="register_form" onSubmit={handleSubmit}>
               <div className="mb-3">
+              <img src={user} className="image_icons" alt="Girl in a jacket" width="24" height="24"/>
                 <label id="name_title" htmlFor="name" >
-                <img src={user} className="image_icons" alt="Girl in a jacket" width="24" height="24"/>
                   <strong >Name</strong>
                 </label>
                 <input
@@ -62,8 +62,8 @@ const SignUpForm = ({ navigate }) => {
                 />
               </div>
               <div className="mb-3">
+              <img src={envelope} className="image_icons" alt="email" width="24" height="24"/>
                 <label id="email_title" htmlFor="email">
-                <img src={envelope} className="image_icons" alt="email" width="24" height="24"/>
                   <strong>Email</strong>
                 </label>
                 <input
@@ -76,8 +76,8 @@ const SignUpForm = ({ navigate }) => {
                 />
               </div>
               <div className="mb-3">
+              <img src={lock} className="image_icons" alt="Girl in a jacket" width="24" height="24"/>
                 <label id="password_title" htmlFor="password">
-                <img src={lock} className="image_icons" alt="Girl in a jacket" width="24" height="24"/>
                   <strong>Password</strong>
                 </label>
                 <input
@@ -94,7 +94,7 @@ const SignUpForm = ({ navigate }) => {
             </form>
             <div>
               <p className="reminder_msg">Already Have an Account?</p>
-              <a>Login</a>
+              <a className= "link" href="/login">Login</a>
             </div>
                 
             
