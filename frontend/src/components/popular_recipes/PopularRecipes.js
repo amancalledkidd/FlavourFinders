@@ -5,6 +5,7 @@ import salmon from "../images/salmon.jpg"
 
 const PopularRecipe = () => {
     return(
+        
         <>
         <h1 className="main-title">Flavor Finders</h1>
         <h4 className="slogan">Season the Day!</h4>
