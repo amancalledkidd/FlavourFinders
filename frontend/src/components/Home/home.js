@@ -21,6 +21,7 @@ function Home(){
                 <Link to="/popular">
                     <button className = "popular-recipes"><p className="recipe_text">Don't know where to start?<br />Click here for popular recipes!</p></button>
                 </Link>
+                </div>
             </div>
         </>
     )
