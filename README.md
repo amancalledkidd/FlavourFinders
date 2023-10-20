@@ -1,14 +1,14 @@
 # Team: FlavourFinder
-The team has created a recipe generator webapp that will generate recipe for user based on the available ingredients as their input & other provided requirements.
+FlavourFinder is a WebApp that aims to help users get food ideas based on what their available ingredients, dietary requirements and cooking time. 
 
 
 ## 🤝 Our Team
-👨‍💻 **[Alex Wilson](https://github.com/APWilson97)**
-👩‍💻 **[Janna Limpin](https://github.com/dr3amcoder)**
-👩‍💻 **[Judith Baidoo](https://github.com/Judithbaidoo)**
-👨‍💻 **[Khalifa Fadel](https://github.com/kmf0208)**
-👨‍💻 **[Kumani Kidd](https://github.com/amancalledkidd)**
-👩‍💻 **[Lily Burton](https://github.com/LilyBurton)**
+* 👨‍💻 **[Alex Wilson](https://github.com/APWilson97)**
+* 👩‍💻 **[Janna Limpin](https://github.com/dr3amcoder)**
+* 👩‍💻 **[Judith Baidoo](https://github.com/Judithbaidoo)**
+* 👨‍💻 **[Khalifa Fadel](https://github.com/kmf0208)**
+* 👨‍💻 **[Kumani Kidd](https://github.com/amancalledkidd)**
+* 👩‍💻 **[Lily Burton](https://github.com/LilyBurton)**
 
 
 ## 🚀 Tech stack
@@ -19,10 +19,9 @@ Frontend:
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 
 Backend
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 
 
 ## Planning
@@ -53,7 +52,7 @@ https://trello.com/b/HSR93dPz/tickets
 ### Set up your project
 
 1. Fork this repository
-2. Rename your fork to `acebook-<team name>`
+2. Rename your fork to `FlavourFinders-<team name>`
 3. Clone your fork to your local machine
 4. Install Node.js dependencies for both the `frontend` and `api` directories.
    ```
@@ -158,15 +157,3 @@ Some people occasionally experience MongoDB connection errors when running the t
 - Check that it's running using `brew services list`
 
 If you have issues that are not resolved by these tips, please reach out to a coach and, once the issue is resolved, we can add a new tip!
-
-
-
-<!-- BEGIN GENERATED SECTION DO NOT EDIT -->
-
----
-
-**How was this resource?**  
-[😫](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Facebook-mern-template&prefill_File=README.md&prefill_Sentiment=😫) [😕](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Facebook-mern-template&prefill_File=README.md&prefill_Sentiment=😕) [😐](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Facebook-mern-template&prefill_File=README.md&prefill_Sentiment=😐) [🙂](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Facebook-mern-template&prefill_File=README.md&prefill_Sentiment=🙂) [😀](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Facebook-mern-template&prefill_File=README.md&prefill_Sentiment=😀)  
-Click an emoji to tell us.
-
-<!-- END GENERATED SECTION DO NOT EDIT -->
