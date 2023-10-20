@@ -27,25 +27,25 @@ input{
   color: rgb(49, 49, 84);
 }
 
-.mb-3{
+.input_fields{
   width: 550px;
   padding: 30px 5px;
   display: flex;
   justify-content: center;
 }
 
-#name_input, #email_input {
+/* #name_input, #email_input {
   margin-right: 30px;
   width: 175px;
   padding-right: 100px;
-}
+} */
 
-#password_input {
+/* #password_input {
   margin-right: 30px;
   width: 175px;
   padding-right: 100px;
   margin-right: 50px;
-}
+} */
 
 #password_title {
   padding-right: 7px;
