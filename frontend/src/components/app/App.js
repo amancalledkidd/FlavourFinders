@@ -11,6 +11,7 @@ import {
   Route,
 } from "react-router-dom";
 import MyRecipes from '../my_recipes/myRecipes';
+import RecipeView from '../recipe_view/recipeView';
 
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
           <Route path='/signup' element={<SignUpForm navigate={ useNavigate() }/>}/>
           <Route path='/generator' element={<Generator navigate={ useNavigate() }/>}/>
           <Route path='/my_recipes' element={<MyRecipes navigate={ useNavigate() }/>}/>
+          <Route path='/my_recipes/recipe_view' element={<RecipeView navigate={ useNavigate() }/>}/>
           <Route path='/' element={<Home navigate={ useNavigate() }/>}/>
         </Routes>
     );

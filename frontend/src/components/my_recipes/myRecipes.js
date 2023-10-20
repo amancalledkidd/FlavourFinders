@@ -51,7 +51,7 @@ const MyRecipes = () => {
         {recipeList.map(
             (recipe) => ( <MyRecipeBox recipe={ recipe } key={ recipe._id } handleDeleteRecipeSubmit={handleDeleteRecipeSubmit}/> )
         )}
-
+        <br/>
         <a href="/generator">Recipe Generator</a>
         </>
     )

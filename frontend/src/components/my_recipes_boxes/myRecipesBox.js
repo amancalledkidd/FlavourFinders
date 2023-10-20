@@ -18,12 +18,23 @@ const MyRecipeBox = ({ recipe, handleDeleteRecipeSubmit }) => {
         handleDeleteRecipeSubmit(recipe)
     }
 
+    const handleChangeCurrentRecipe = () => {
+        window.localStorage.setItem("currentRecipe", recipe.content)
+    }
+
     return (
         <>
         <div className="recipe-box-container">
-            <h1 className="recipe-box-title">{recipeObj.title}</h1>
-            <p className="recipe-box-time">Cooking Time: {recipeObj.time}</p>
-            <p className="recipe-box-serves">Serves: {recipeObj.serves}</p>
+            <a href="/my_recipes/recipe_view" onClick={handleChangeCurrentRecipe}>
+            <div className="recipe">
+                <h1 className="recipe-title">{recipeObj.title}</h1>
+                <p className="recipe-time">Cooking Time: {recipeObj.time}</p>
+                <p className="recipe-serves">Serves: {recipeObj.serves}</p>
+            </div>
+            </a>
+        </div>
+
+        <div>
             <button onClick={handleDeleteEvent}>Delete Recipe</button>
         </div>
         </>
