@@ -8,6 +8,7 @@ const postsRouter = require("./routes/posts");
 const authenticationRouter = require("./routes/authentication");
 const usersRouter = require("./routes/users");
 const generatorRouter = require("./routes/generator")
+const recipesRouter = require("./routes/recipes")
 
 const app = express();
 
@@ -44,6 +45,7 @@ app.use("/posts", tokenChecker, postsRouter);
 app.use("/tokens", authenticationRouter);
 app.use("/users", usersRouter);
 app.use("/generator", generatorRouter);
+app.use("/recipes", tokenChecker, recipesRouter);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

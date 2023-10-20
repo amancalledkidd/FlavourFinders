@@ -11,16 +11,20 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import MyRecipes from '../my_recipes/myRecipes';
+import RecipeView from '../recipe_view/recipeView';
 
 
 const App = () => {
     return (
         <Routes>
-          <Route path='/posts'  element={<Feed navigate={ useNavigate() }/>}/>
+          <Route path='/recipe'  element={<Feed navigate={ useNavigate() }/>}/>
           <Route path='/login'  element={<LoginForm  navigate={ useNavigate() }/>}/>
           <Route path='/signup' element={<SignUpForm navigate={ useNavigate() }/>}/>
           <Route path='/generator' element={<Generator navigate={ useNavigate() }/>}/>
           <Route path='/popular_recipes' element={<PopularRecipes navigate={ useNavigate() }/>}/>
+          <Route path='/my_recipes' element={<MyRecipes navigate={ useNavigate() }/>}/>
+          <Route path='/my_recipes/recipe_view' element={<RecipeView navigate={ useNavigate() }/>}/>
           <Route path='/' element={<Home navigate={ useNavigate() }/>}/>
         </Routes>
     );

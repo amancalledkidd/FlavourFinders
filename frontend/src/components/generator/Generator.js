@@ -1,8 +1,13 @@
 import React, { useState } from "react";
+
+import Navbar from "../Navbar";
+
 import Recipe from "../recipe/recipe";
 import Loader from "../loader/Loader";
 
+
 const Generator = ({ navigate }) => {
+    const [token, setToken] = useState(window.localStorage.getItem("token"))
     const [mealType, setMealType] = useState("")
     const [cuisine, setCuisine] = useState("")
     const [cookingTime, setCookingTime] = useState("")
@@ -53,9 +58,30 @@ const Generator = ({ navigate }) => {
         })
     }
 
+    const handleSaveRecipeSubmit = (e) => {
+        e.preventDefault()
+        //fetch to backend to save the recipe with user ID attached
+        fetch('/recipes', {
+            method: "POST",
+            headers: {
+                'Authorization': `Bearer ${token}`,
+                'Content-type': 'application/json'
+            },
+            body: JSON.stringify({ content: generatorRecipe })
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log("Recipe has been successfully saved")
+            console.log(data.token)
+            console.log(data.message)
+        })
+    }
+
 
     return (
         <>
+        <Navbar/>
+
         <h1> Logo </h1>
 
         { !loading &&
@@ -116,7 +142,11 @@ const Generator = ({ navigate }) => {
         }
 
         { generatorRecipe && 
+            <>
             <Recipe recipe={generatorRecipe}/>
+            <button onClick={handleSaveRecipeSubmit}>Save Recipe</button>
+            <button>Generate New Recipe</button>
+            </>
         }
         </>
     )
