@@ -87,7 +87,7 @@ const UnauthenticatedNav = () => {
         <div style={buttonContainerStyle} className="button-container">
         <Link to="/generator">
             <button style={{ ...buttonStyle, ...{ backgroundColor: '#f2f2f2', color: '#333' } }} className="unauthenticated-button">
-              new
+              Generate Recipe
             </button>
           </Link>
           <Link to="/login">

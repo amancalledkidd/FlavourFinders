@@ -1,13 +1,50 @@
 body {
-    justify-content: center;
+    color: slategrey;
+    font-family: 'Georgia', sans-serif;
+    line-height: 20px;
+    background-color: #fffbff;
     display: flex;
+    flex-wrap: wrap;
 }
 
-.page-title {
-    padding: 100px;
-    border-radius: 25px;
-    margin-top: 100px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
+.main-title {
+    font-family: 'Montserrat', serif;
+    font-size: x-large;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: auto;
+    grid-template-rows: max-content;
+    column-gap: 20px;
+    width: 100%;
+}
+
+.grid-item {
+    padding: 2% 2% 2% 2%;
+}
+
+.dish-name {
+    color: darkcyan;
+    font-size: medium;
+    letter-spacing: 1%;
+}
+
+.dish-img {
+    width: 450px;
+    height: 450px;
+}
+
+p {
+    color: darksalmon;
+    font-size: medium;
+    font-weight: bold;
+}
+
+/* autoresize & adjust grids to fit user's */
+@media screen and (max-width: 700px) {
+    .grid-container {   
+        flex-direction: column;
+    }
 }
