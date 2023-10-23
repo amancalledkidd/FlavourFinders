@@ -1,10 +1,5 @@
 body {
-    /* display: flex; */
-    justify-content: center;
-    align-items: center;
-    
-    /* padding: 100px; */
-    /* background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); */
+    margin: 0px;
 }
 
 .slogan {
@@ -45,11 +40,12 @@ body {
     border: 0;
     text-shadow: 2px 2px 2px rgb(179, 177, 177);
 }
- .border {
+
+.border {
     padding: 100px;
     background-image: radial-gradient(circle, rgb(244, 252, 255), rgb(220, 250, 255), rgb(103, 189, 255));
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
- }
+}
 
 .recipe_text {
     font-size: 30px;

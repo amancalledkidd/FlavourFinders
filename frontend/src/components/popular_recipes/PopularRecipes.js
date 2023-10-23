@@ -1,6 +1,7 @@
 import React from 'react'
 import "./popular_recipes.css"
 import Navbar from '../Navbar'
+import logo from '../images/logo.png'
 import pasta from "../images/pasta.jpg"
 import chicken from "../images/chicken.jpg"
 import salmon from "../images/salmon.jpg"
@@ -10,7 +11,10 @@ const PopularRecipe = () => {
         <>
         <Navbar />
         <div className='page-content'>
-            <h2 className='main-title'>Three simple and quick recipes</h2>
+            <div className='title'>
+                <img className='logo' src={logo} alt='Robot chef' />
+                <h2 className='main-title'>Three simple and quick recipes</h2>
+            </div>
             <div className='grid-container'>
                 <div className='grid-item'>
                     <h3 className='dish-name'>Pasta Aglio e Olio</h3>

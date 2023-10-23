@@ -1,19 +1,40 @@
 body {
     color: slategrey;
     font-family: 'Georgia', sans-serif;
-    line-height: 20px;
+    /* line-height: 20px; */
     background-color: #fffbff;
     display: flex;
     flex-wrap: wrap;
 }
 
+.title {
+    display: flex;
+    justify-content: center;
+    grid-template-columns: 60% 40%;
+    padding-top: 2%;
+}
+
+.logo {
+    width: 20%;
+    height: 20%;
+    align-content: center;
+}
+
 .main-title {
-    font-family: 'Montserrat', serif;
-    font-size: x-large;
+    /* color: deepskyblue; */
+    font-family: 'Georgia', sans-serif;
+    font-size: 250%;
+    /* text-shadow: 2px 2px 2px rgb(145, 144, 144); */ /*add shadow*/
+    padding-top: 8%;
+    color: transparent;
+    background: linear-gradient(45deg, #FFC700, #FF1100); /* Define your gradient colors & direction */
+    -webkit-background-clip: text; /* Clip the background to the text */
+    background-clip: text;
 }
 
 .grid-container {
-    display: grid;
+    display: flex;
+    justify-content: center;
     grid-template-columns: 33% 33% 33%;
     grid-template-rows: auto;
     grid-template-rows: max-content;
@@ -27,22 +48,32 @@ body {
 
 .dish-name {
     color: darkcyan;
-    font-size: medium;
+    font-size: 150%;
     letter-spacing: 1%;
 }
 
 .dish-img {
-    width: 450px;
-    height: 450px;
+    width: 400px;
+    height: 400px;
+}
+
+.dish-img:hover {
+    transition: 0.7s;
+    transform: scale(1.1);
 }
 
 p {
     color: darksalmon;
-    font-size: medium;
+    font-size: 125%;
     font-weight: bold;
 }
 
-/* autoresize & adjust grids to fit user's */
+li {
+    font-size: 100%;
+    line-height: 20px;
+}
+
+/* auto-resize & adjust grids to fit user's */
 @media screen and (max-width: 700px) {
     .grid-container {   
         flex-direction: column;
