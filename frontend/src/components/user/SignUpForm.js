@@ -132,7 +132,10 @@ const SignUpForm = ({ navigate }) => {
               </button>
             </form>
             <div>
-            <Link to="/login">Click here to go to the login page</Link>
+              <p>
+                already have an account
+                <Link to="/login"> login</Link>
+              </p>
             </div>
                 
             

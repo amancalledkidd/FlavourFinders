@@ -83,10 +83,11 @@ const LogInForm = ({ navigate }) => {
           </button>
         </form>
         <div className='inner_bottom'>
-          <Link to="/signup">Click here to go to the signup page</Link>
+          <p>
+            make an account
+            <Link to="/signup">SignUp</Link>
+          </p>
         </div>
-            
-        
       </div>
     </div>
     </div>
