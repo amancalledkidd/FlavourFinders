@@ -21,15 +21,10 @@ body {
 }
 
 .main-title {
-    /* color: deepskyblue; */
+    color: rgb(11, 169, 204);
     font-family: 'Georgia', sans-serif;
     font-size: 250%;
-    /* text-shadow: 2px 2px 2px rgb(145, 144, 144); */ /*add shadow*/
-    padding-top: 8%;
-    color: transparent;
-    background: linear-gradient(45deg, #FFC700, #FF1100); /* Define your gradient colors & direction */
-    -webkit-background-clip: text; /* Clip the background to the text */
-    background-clip: text;
+    padding-top: 7%;
 }
 
 .grid-container {
