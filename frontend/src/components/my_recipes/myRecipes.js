@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import MyRecipeBox from "../my_recipes_boxes/myRecipesBox";
+import Navbar from "../Navbar";
 
 const MyRecipes = () => {
     const [recipeList, setRecipeList] = useState([]);
@@ -48,6 +49,7 @@ const MyRecipes = () => {
 
     return (
         <>
+        <Navbar />
         {recipeList.map(
             (recipe) => ( <MyRecipeBox recipe={ recipe } key={ recipe._id } handleDeleteRecipeSubmit={handleDeleteRecipeSubmit}/> )
         )}
@@ -57,5 +59,6 @@ const MyRecipes = () => {
     )
 
 }
+
 
 export default MyRecipes;
