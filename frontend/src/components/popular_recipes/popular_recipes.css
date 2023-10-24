@@ -1,13 +1,76 @@
 body {
-    justify-content: center;
+    color: slategrey;
+    font-family: 'Georgia', sans-serif;
+    /* line-height: 20px; */
+    background-color: #fffbff;
     display: flex;
+    flex-wrap: wrap;
 }
 
-.page-title {
-    padding: 100px;
-    border-radius: 25px;
-    margin-top: 100px;
-    justify-content: center;
-    align-items: center;
+.title {
     display: flex;
+    justify-content: center;
+    grid-template-columns: 60% 40%;
+    padding-top: 2%;
+}
+
+.logo {
+    width: 20%;
+    height: 20%;
+    align-content: center;
+}
+
+.main-title {
+    color: rgb(11, 169, 204);
+    font-family: 'Georgia', sans-serif;
+    font-size: 250%;
+    padding-top: 7%;
+}
+
+.grid-container {
+    display: flex;
+    justify-content: center;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: auto;
+    grid-template-rows: max-content;
+    column-gap: 20px;
+    width: 100%;
+}
+
+.grid-item {
+    padding: 2% 2% 2% 2%;
+}
+
+.dish-name {
+    color: darkcyan;
+    font-size: 150%;
+    letter-spacing: 1%;
+}
+
+.dish-img {
+    width: 400px;
+    height: 400px;
+}
+
+.dish-img:hover {
+    transition: 0.7s;
+    transform: scale(1.1);
+}
+
+p {
+    color: darksalmon;
+    font-size: 125%;
+    font-weight: bold;
+}
+
+li {
+    font-size: 100%;
+    line-height: 20px;
+}
+
+/* auto-resize & adjust grids to fit user's */
+@media screen and (max-width: 700px) {
+    .grid-container {   
+        flex-direction: column;
+    }
 }
