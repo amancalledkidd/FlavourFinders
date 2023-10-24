@@ -1,4 +1,5 @@
 import React from "react";
+import "./loader.css";
 
 
 
@@ -7,7 +8,9 @@ const Loader = () => {
     return (
         <>
         {<LoaderIcon/>}
-        <p>Finding your flavours...</p>
+        <div className="loading-message-container">
+            <p className="loading-message">Finding your flavours...</p>
+        </div>
         </>
     )
 }

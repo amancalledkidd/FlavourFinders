@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-
-import Navbar from "../Navbar";
-
+import "./generator.css";
+import Navbar from "../navbar/Navbar";
+import logo  from "../assets/FlavourFinderLogo.png"
 import Recipe from "../recipe/recipe";
 import Loader from "../loader/Loader";
 
@@ -15,6 +15,7 @@ const Generator = ({ navigate }) => {
     const [ingredients, setIngredients] = useState("")
     const [generatorRecipe, setGeneratorRecipe] = useState("")
     const [loading, setLoading] = useState(false)
+    
 
     const handleMealTypeChange = (event) => {
         setMealType(event.target.value)
@@ -77,64 +78,83 @@ const Generator = ({ navigate }) => {
         })
     }
 
+    const handleNewRecipe = (e) => {
+        e.preventDefault()
+        setGeneratorRecipe('')
+    }
 
     return (
         <>
         <Navbar/>
+        <div className="generator-logo-container">
+            <img src={logo} className="generator-logo" alt="logo"/> 
+        </div>
 
-        <h1> Logo </h1>
-
-        { !loading &&
-        <form onSubmit={handleFormSubmit}>
-            <h2> Recipe Generator </h2>
-            <h3>Meal type</h3>
-            <select id="mealType" type="mealType" value={mealType} onChange={handleMealTypeChange}>
-                <option value="Breakfast">Breakfast</option>
-                <option value="Lunch">Lunch</option>
-                <option value="Dinner">Dinner</option>
-                <option value="Dessert">Dessert</option>
-            </select>
-            <br/>
-            <br/>
-            <h3>Cuisine</h3>
-            <select id="cuisine" type="cuisine" value={cuisine} onChange={handleCuisineChange}>
-                <option value="Any">Any</option>
-                <option value="Chinese">Chinese</option>
-                <option value="Indian">Indian</option>
-                <option value="Italian">Italian</option>
-                <option value="Japanese">Japanese</option>
-                <option value="Mexican">Mexican</option>
-                <option value="Thai">Indian</option>
-                <option value="Greek">Greek</option>
-                <option value="French">French</option>
-                <option value="Spanish">Spanish</option>
-                <option value="Korean">Korean</option>
-                <option value="Mediterranean">Mediterannean</option>
-                <option value="Caribbean">Caribbean</option>
-                <option value="Turkish">Turkish</option>
-                <option value="Argentinean">Argentinean</option>
-                <option value="Indonesian">Indonesian</option>
-            </select>
-            <br/>
-            <br/>
-            <h3>Cooking Time</h3>
-            <select id="cookingTime" type="cookingTime" value={cookingTime} onChange={handleCookingTimeChange}>
-                <option value="Up to 30 minutes">15-30 minutes</option>
-                <option value="30-45 minutes">30-45 minutes</option>
-                <option value="60+ minutes">Over 1 hour</option>
-            </select>
-            <br/>
-            <br/>
-            <h3>Dietary Requirements</h3>
-            <input placeholder="Please enter your dietary requirements" id="dietaryReq" type="dietaryReq" value={dietaryReq} onChange={handleReqChange} />
-            <br/>
-            <br/>
-            <h3>Ingredients</h3>
-            <input placeholder="Please enter preferred ingredients" id="ingredients" type="ingredients" value={ingredients} onChange={handleIngredientsChange} />
-            <br/>
-            <br/>
-            <input id="submit "type="submit" value="Generate Recipe" />
-        </form>
+        { (!loading && !generatorRecipe ) &&
+        <div className="generator">
+            <form onSubmit={handleFormSubmit}>
+                <h2 className="generator-page-title"> Recipe Generator </h2>
+                <h3 className="generator-field-title">Meal type</h3>
+                <div className="dropdown">
+                    <select className="dropdown" id="mealType" type="mealType" value={mealType} onChange={handleMealTypeChange}>
+                        <option value="Breakfast">Breakfast</option>
+                        <option value="Lunch">Lunch</option>
+                        <option value="Dinner">Dinner</option>
+                        <option value="Dessert">Dessert</option>
+                    </select>
+                </div>
+                <br/>
+                <br/>
+                <h3 className="generator-field-title">Cuisine</h3>
+                <div className="dropdown">
+                    <select className="dropdown" id="cuisine" type="cuisine" value={cuisine} onChange={handleCuisineChange}>
+                        <option value="Any">Any</option>
+                        <option value="Chinese">Chinese</option>
+                        <option value="Indian">Indian</option>
+                        <option value="Italian">Italian</option>
+                        <option value="Japanese">Japanese</option>
+                        <option value="Mexican">Mexican</option>
+                        <option value="Thai">Indian</option>
+                        <option value="Greek">Greek</option>
+                        <option value="French">French</option>
+                        <option value="Spanish">Spanish</option>
+                        <option value="Korean">Korean</option>
+                        <option value="Mediterranean">Mediterannean</option>
+                        <option value="Caribbean">Caribbean</option>
+                        <option value="Turkish">Turkish</option>
+                        <option value="Argentinean">Argentinean</option>
+                        <option value="Indonesian">Indonesian</option>
+                    </select>
+                </div>
+                <br/>
+                <br/>
+                <h3 className="generator-field-title">Cooking Time</h3>
+                <div className="dropdown">
+                    <select id="cookingTime" type="cookingTime" value={cookingTime} onChange={handleCookingTimeChange}>
+                        <option value="Up to 30 minutes">15-30 minutes</option>
+                        <option value="30-45 minutes">30-45 minutes</option>
+                        <option value="60+ minutes">Over 1 hour</option>
+                    </select>
+                </div>
+                <br/>
+                <br/>
+                <h3 className="generator-field-title">Dietary Requirements</h3>
+                <div className="input">
+                    <textarea placeholder="Please enter your dietary requirements" id="dietaryReq" type="dietaryReq" value={dietaryReq} onChange={handleReqChange} />
+                </div>
+                <br/>
+                <br/>
+                <h3 className="generator-field-title">Ingredients</h3>
+                <div className="input">
+                    <textarea placeholder="Please enter preferred ingredients" id="ingredients" type="ingredients" value={ingredients} onChange={handleIngredientsChange} />
+                </div>
+                <br/>
+                <br/>
+                <div className="generator-button-container">
+                    <input id="submit "type="submit" value="Generate Recipe" />
+                </div>
+            </form>
+        </div>
         }
 
         { loading && 
@@ -144,8 +164,10 @@ const Generator = ({ navigate }) => {
         { generatorRecipe && 
             <>
             <Recipe recipe={generatorRecipe}/>
-            <button onClick={handleSaveRecipeSubmit}>Save Recipe</button>
-            <button>Generate New Recipe</button>
+            <div className="recipe-button-container">
+                <button id="recipe-button-save" className="recipe-button" onClick={handleSaveRecipeSubmit}>Save Recipe</button>
+                <button className="recipe-button" onClick={handleNewRecipe} >Generate New Recipe</button>
+            </div>
             </>
         }
         </>

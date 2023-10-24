@@ -3,9 +3,7 @@ import { Link } from 'react-router-dom'
 import "./home.css"
 import "../generator/Generator"
 import "../popular_recipes/PopularRecipes"
-
-
-import Navbar from '../Navbar';
+import Navbar from '../navbar/Navbar';
 
 
 function Home(){

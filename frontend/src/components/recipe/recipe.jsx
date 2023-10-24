@@ -21,17 +21,30 @@ const Recipe = ({ recipe }) => {
 
     return (
         <div className="recipe-container">
-            <h1 className="recipe-title">{recipeObj.title}</h1>
-            <p className="recipe-description">{recipeObj.intro}</p>
-            <p className="recipe-time">Time: {recipeObj.time}</p>
-            <p className="recipe-serves">Serves: {recipeObj.serves}</p>
-            <p className="recipe-calories">Calories: {recipeObj.calories}</p>
-            <div className="recipe-ingredients">Ingredients:
+            <div className='recipe-header'>
+                <h1 className="recipe-title">{recipeObj.title}</h1>
+                <p className="recipe-description">{recipeObj.intro}</p>
+                <p className="recipe-time">
+                    <span className='small-title'>Time: </span>
+                    <span>{recipeObj.time}</span>
+                </p>
+                <p className="recipe-serves">
+                    <span className='small-title'>Serves: </span> 
+                    <span>{recipeObj.serves}</span>
+                </p>
+                <p className="recipe-calories">
+                    <span className='small-title'>Calories: </span> 
+                    <span>{recipeObj.calories}</span>
+                </p>
+            </div>
+            <div className="recipe-ingredients">
+                <p className='ingredients-title'>Ingredients: </p>
                 {recipeObj.ingredients.map((ingredient, i) => (
                     <p key={i}>{ingredient}</p>
                 ))}
             </div>
-            <div className="recipe-instructions">Instructions:
+            <div className="recipe-instructions">
+                <p className='instructions-title'>Instructions: </p>
                 {recipeObj.instructions.map((instructions, i) => (
                     <p key={i}>{instructions}</p>
                 ))}

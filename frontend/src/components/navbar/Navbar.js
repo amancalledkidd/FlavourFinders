@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './navbar.css';
 
 const navbarStyle = {
   backgroundColor: '#3a405a',
@@ -45,12 +46,12 @@ const logout = () => {
 
 const AuthenticatedNav = () => {
   return (
-    <nav style={{ ...navbarStyle, ...{ backgroundColor: '#3a405a' } }} className="navbar">
-      <div style={navbarStyle} className="navbar">
-        <span style={brandStyle} className="brand">
+    <nav className="navbar">
+      <div className="navbar">
+        <span className="brand">
           FlavourFinder
         </span>
-        <div style={buttonContainerStyle} className="button-container">
+        <div className="button-container">
             <Link to="/">
             <button style={{ ...buttonStyle, ...{ backgroundColor: '#fffbff', color: '#3a405a' } }} className="authenticated-button logout-button">
               Home
@@ -79,24 +80,24 @@ const AuthenticatedNav = () => {
 
 const UnauthenticatedNav = () => {
   return (
-    <nav style={{ ...navbarStyle, ...{ backgroundColor: '#3a405a' } }} className="navbar">
-      <div style={navbarStyle} className="navbar">
-        <span style={brandStyle} className="brand">
+    <nav className="navbar">
+      <div className="navbar">
+        <span className="brand">
           FlavourFinder
         </span>
         <div style={buttonContainerStyle} className="button-container">
         <Link to="/generator">
-            <button style={{ ...buttonStyle, ...{ backgroundColor: '#f2f2f2', color: '#333' } }} className="unauthenticated-button">
+            <button className="unauthenticated-button">
               new
             </button>
           </Link>
           <Link to="/login">
-            <button style={{ ...buttonStyle, ...{ backgroundColor: '#f2f2f2', color: '#333' } }} className="unauthenticated-button">
+            <button className="unauthenticated-button">
               Login
             </button>
           </Link>
           <Link to="/signup">
-            <button style={{ ...buttonStyle, ...{ backgroundColor: '#f2f2f2', color: '#333' } }} className="unauthenticated-button">
+            <button className="unauthenticated-button">
               Sign Up
             </button>
           </Link>
