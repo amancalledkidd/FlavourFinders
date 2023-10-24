@@ -1,42 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
-const navbarStyle = {
-  backgroundColor: '#3a405a',
-  color: '#fffbff',
-  padding: '10px',
-  position: 'relative',
-};
-
-const brandStyle = {
-  fontSize: '24px',
-  color: '#fffbff',
-  textDecoration: 'none',
-};
-
-const buttonContainerStyle = {
-  position: 'absolute',
-  top: '0',
-  right: '0',
-  display: 'flex',
-  alignItems: 'center',
-};
-
-const buttonStyle = {
-  backgroundColor: '#f2f2f2',
-  color: '#333',
-  border: 'none',
-  padding: '8px 16px',
-  width: '100px',
-  textAlign: 'center',
-  textDecoration: 'none',
-  display: 'inline-block',
-  fontSize: '16px',
-  cursor: 'pointer',
-  margin: '0 10px',
-  borderRadius: '5px',
-};
-
+import "./navbar.css";
+import recipe_generator from '../images/recipe_generator.svg';
+import login_icon from '../images/login.svg';
+import logout_icon from '../images/logout.svg';
+import sign_up from '../images/sign_up.svg';
+import saved_recipe from '../images/saved_recipe.svg';
 
 
 const logout = () => {
@@ -46,33 +15,20 @@ const logout = () => {
 const AuthenticatedNav = () => {
   return (
     <nav className="navbar">
-      <div className="navbar">
-        <span className="brand">
-          FlavourFinder
-        </span>
         <div className="button-container">
-            <Link to="/">
-            <button style={{ ...buttonStyle, ...{ backgroundColor: '#fffbff', color: '#3a405a' } }} className="authenticated-button logout-button">
-              Home
-            </button>
+          <Link to="/">
+            <span className="brand">FlavourFinder</span>
           </Link>
-          <Link to="/generator">
-            <button style={{ ...buttonStyle, ...{ backgroundColor: '#fffbff', color: '#3a405a' } }} className="authenticated-button logout-button">
-              NewGenerate
-            </button>
+          <Link title='Recipe Generator' className='links' to="/generator">
+            <img className='recipe_generator' src={ recipe_generator } alt='chef hat with heart' />
           </Link>
-          <Link to="/my_recipes">
-            <button style={{ ...buttonStyle, ...{ backgroundColor: '#fffbff', color: '#3a405a' } }} className="authenticated-button posts-button">
-              MyRecipes
-            </button>
+          <Link title='Saved Recipe(s)' className='links' to="/my_recipes">
+            <img className='saved_recipe' src={ saved_recipe } alt='clipboard with heart' />
           </Link>
-          <Link to="/" onClick={logout}>
-            <button style={{ ...buttonStyle, ...{ backgroundColor: '#fffbff', color: '#3a405a' } }} className="authenticated-button logout-button">
-              Logout
-            </button>
+          <Link title='Log Out' className='links' to="/" onClick={logout}>
+            <img className='logout_icon' src={ logout_icon } alt='locked key' />
           </Link>
         </div>
-      </div>
     </nav>
   );
 };
@@ -80,28 +36,20 @@ const AuthenticatedNav = () => {
 const UnauthenticatedNav = () => {
   return (
     <nav className="navbar">
-      <div className="navbar">
-        <span className="brand">
-          FlavourFinder
-        </span>
-        <div style={buttonContainerStyle} className="button-container">
-        <Link to="/generator">
-            <button style={{ ...buttonStyle, ...{ backgroundColor: '#f2f2f2', color: '#333' } }} className="unauthenticated-button">
-              Generate Recipe
-            </button>
+        <div className="button-container">
+          <Link to="/">
+            <span className="brand">FlavourFinder</span>
           </Link>
-          <Link to="/login">
-            <button className="unauthenticated-button">
-              Login
-            </button>
+          <Link title='Recipe Generator' className='links' to="/generator">
+            <img className='recipe_generator' src={ recipe_generator } alt='recipe generator' />
           </Link>
-          <Link to="/signup">
-            <button className="unauthenticated-button">
-              Sign Up
-            </button>
+          <Link title='Login' className='links' to="/login">
+            <img className='login_icon' src={ login_icon } alt='unlocked key' />
+          </Link>
+          <Link title='Sign Up' className='links' to="/signup">
+            <img className='sign_up' src={ sign_up } alt='user id card' />
           </Link>
         </div>
-      </div>
     </nav>
   );
 };

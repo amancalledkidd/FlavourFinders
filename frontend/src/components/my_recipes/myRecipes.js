@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import MyRecipeBox from "../my_recipes_boxes/myRecipesBox";
-import Navbar from "../Navbar";
+import Navbar from '../navbar/Navbar'
 
 const MyRecipes = () => {
     const [recipeList, setRecipeList] = useState([]);

@@ -4,15 +4,13 @@ import "./home.css"
 import "../generator/Generator"
 import "../popular_recipes/PopularRecipes"
 import logo from '../images/logo.png'
-import Navbar from '../Navbar';
+import Navbar from '../navbar/Navbar'
 
 
 function Home(){
     return (
         <>
-        <div className= "navbar">
             <Navbar/>
-        </div>
             <div className = "border">
                 <img className="logo" src={logo} alt="Robot chef" />
                 <h2 className = "slogan">Season the Day!</h2>
@@ -26,7 +24,7 @@ function Home(){
                     <Link to="/generator">
                         <button className = "generate-recipes"><p className="recipe_text"><strong>Click here to generate recipes!</strong></p></button>
                     </Link>
-                    <Link to="/popular">
+                    <Link to="/popular_recipes">
                         <button className = "popular-recipes"><p className="recipe_text"><strong>Click here for popular recipes!</strong></p></button>
                     </Link>
             </div>
