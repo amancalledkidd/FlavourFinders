@@ -6,7 +6,7 @@ const RecipesControllers = {
         Recipe.find({ user_id: req.user_id })
         .then(recipes => {
             const token = TokenGenerator.jsonwebtoken(req.user_id)
-            res.status(201).json({ recipes: recipes, token: token })
+            res.status(200).json({ recipes: recipes, token: token })
         })
     },
     Create: (req, res) => {
