@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import lock from "../images/password.jpg";
 import envelope from "../images/envelope.jpg";
 import background from "../images/background.jpg";
+import { Link } from 'react-router-dom';
 
 const LogInForm = ({ navigate }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -19,8 +21,9 @@ const LogInForm = ({ navigate }) => {
     })
 
     if(response.status !== 201) {
-      console.log("oop")
-      navigate('/login')
+      let data = await response.json();
+      setErrorMessage("Incorrect email or password");
+      //navigate('/login')
     } else {
       console.log("yay")
       let data = await response.json()
@@ -56,6 +59,7 @@ const LogInForm = ({ navigate }) => {
               placeholder="Enter Email"
               autoComplete="off"
               name="email"
+              value={email}
               onChange={handleEmailChange}
             />
           </div>
@@ -69,18 +73,21 @@ const LogInForm = ({ navigate }) => {
               type="password"
               placeholder="Enter Password"
               name="password"
+              value={password}
               onChange={handlePasswordChange}
             />
           </div>
+          <p className="error">{errorMessage}</p>
           <button type="submit" className="register_button">
             Login
           </button>
         </form>
         <div className='inner_bottom'>
-          <p className='reminder_msg'>Forgotten password? Click here</p>
+          <p>
+            make an account
+            <Link to="/signup">SignUp</Link>
+          </p>
         </div>
-            
-        
       </div>
     </div>
     </div>

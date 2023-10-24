@@ -1,58 +1,81 @@
 body {
     margin: 0px;
+    background-color: #ffff;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    grid-template-rows: 40% 20% 40%;
+    grid-template-rows: auto;
+    grid-template-rows: max-content;
+    column-gap: 8%;
+    padding: 3%;
+    border: 0;
+}
+
+.logo {
+    width: 20%;
+    height: 20%;
+    align-content: center;
 }
 
 .slogan {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
+    margin: 0px;
     font-family: cursive;
-    font-size: 80px;
-    text-shadow: 2px 2px 2px rgb(145, 144, 144);
-    color: rgb(49, 49, 84);
-}
-.generate-recipes {
-    background-color: white;
-    /* background-image: radial-gradient(circle, rgb(244, 252, 255), rgb(220, 250, 255), rgb(103, 189, 255)); */
-    padding: 50px;
-    padding-right: 73px;
-    border-radius: 25px;
-    margin-top: 100px;
-    justify-content: center;
-    align-items: center;
+    font-size: 600%;
+    text-align: center; 
     display: flex;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border: 0;
-    text-shadow: 2px 2px 2px rgb(179, 177, 177);
+    justify-content: center; 
+    align-items: center;
+    height: 21vh; 
+    color: transparent; /* Make the text transparent */
+    background: linear-gradient(45deg, #FFC700, #FF1100); /* Define your gradient colors and direction */
+    -webkit-background-clip: text; /* Clip the background to the text */
+    background-clip: text;
+    text-align: center;
+    padding: 2%;
 }
 
-.popular-recipes {
+.popular-recipes, .generate-recipes {
     background-color: white;
-    /* background-image: radial-gradient(circle, rgb(244, 252, 255), rgb(220, 250, 255), rgb(103, 189, 255)); */
-    padding: 60px;
+    padding: 10%;
     border-radius: 25px;
-    margin-top: 100px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border: 0;
-    text-shadow: 2px 2px 2px rgb(179, 177, 177);
 }
 
 .border {
-    padding: 100px;
-    background-image: radial-gradient(circle, rgb(244, 252, 255), rgb(220, 250, 255), rgb(103, 189, 255));
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding-top: 3%;
+    display: flex;
+    justify-content: center;
+    grid-template-columns: 60% 40%;
 }
 
-.recipe_text {
-    font-size: 30px;
-    
+.intro_text {
+    margin: 0%;
+    padding-top: 1%;
+    text-align: center; 
+    font-size: 100%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    line-height: 200%;
 }
+
+a:link { text-decoration: none; }
+
+.recipe_text {
+    color: rgb(11, 169, 204);
+    font-size: 150%;
+}
+
 .popular-recipes:hover, .generate-recipes:hover {
     transition: 0.7s;
     transform: scale(1.1);
-    
+    background-color: rgb(11, 169, 204);
+}
+
+.recipe_text:hover {
+    color: white;
 }

@@ -1,4 +1,5 @@
 import './recipe.css'
+import React from 'react';
 
 const Recipe = ({ recipe }) => {
 
