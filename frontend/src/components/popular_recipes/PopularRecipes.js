@@ -1,6 +1,6 @@
 import React from 'react'
 import "./popular_recipes.css"
-import Navbar from '../Navbar'
+import Navbar from '../navbar/Navbar'
 import logo from '../images/logo.png'
 import pasta from "../images/pasta.jpg"
 import chicken from "../images/chicken.jpg"
@@ -9,6 +9,7 @@ import salmon from "../images/salmon.jpg"
 const PopularRecipe = () => {
     return(
         <>
+        <body className='popular-body'>
         <Navbar />
         <div className='page-content'>
             <div className='title'>
@@ -121,6 +122,7 @@ const PopularRecipe = () => {
                 </div>
             </div>
         </div>
+        </body>
         </>
     )
 }

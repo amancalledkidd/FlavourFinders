@@ -1,0 +1,27 @@
+.recipes-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.recipes-page-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.my-recipes-title{
+    background: linear-gradient(
+        #000c5c 0%,
+        #05b7f8 100%
+    );
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 56px;
+    padding-bottom: 20px;
+}

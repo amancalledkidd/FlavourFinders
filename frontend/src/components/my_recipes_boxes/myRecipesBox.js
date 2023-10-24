@@ -1,4 +1,5 @@
 import React from "react";
+import "./myRecipesBox.css"
 
 const MyRecipeBox = ({ recipe, handleDeleteRecipeSubmit }) => {
     function splitRecipeBox(recipeText) {
@@ -25,18 +26,19 @@ const MyRecipeBox = ({ recipe, handleDeleteRecipeSubmit }) => {
     return (
         <>
         <div className="recipe-box-container">
-            <a href="/my_recipes/recipe_view" onClick={handleChangeCurrentRecipe}>
+            <a className="recipe-link" href="/my_recipes/recipe_view" onClick={handleChangeCurrentRecipe}>
             <div className="recipe">
                 <h1 className="recipe-title">{recipeObj.title}</h1>
-                <p className="recipe-time">Cooking Time: {recipeObj.time}</p>
-                <p className="recipe-serves">Serves: {recipeObj.serves}</p>
+                <p><span className="recipe-sub-head">Cooking Time: </span><span>{recipeObj.time}</span></p>
+                <p><span className="recipe-sub-head">Serves: </span><span>{recipeObj.serves}</span></p>
             </div>
             </a>
+            <div className="recipe-delete-container">
+                <button className="recipe-delete-button" onClick={handleDeleteEvent}>Delete Recipe</button>
+            </div>
         </div>
 
-        <div>
-            <button onClick={handleDeleteEvent}>Delete Recipe</button>
-        </div>
+        
         </>
     )
 }

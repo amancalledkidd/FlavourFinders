@@ -1,0 +1,24 @@
+.back-to-recipes-button {
+    background: none;
+    color: rgba(220, 154, 69, 0.99);
+    border: 0.5px solid rgb(196, 196, 196);
+    padding: 20px;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.back-to-recipes-button:hover {
+    background-color: #0252a7;
+    color: white;
+}
+
+.back-to-recipes-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
