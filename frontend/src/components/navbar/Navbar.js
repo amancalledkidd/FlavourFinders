@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './navbar.css';
 
 const navbarStyle = {
   backgroundColor: '#3a405a',
@@ -87,8 +86,8 @@ const UnauthenticatedNav = () => {
         </span>
         <div style={buttonContainerStyle} className="button-container">
         <Link to="/generator">
-            <button className="unauthenticated-button">
-              new
+            <button style={{ ...buttonStyle, ...{ backgroundColor: '#f2f2f2', color: '#333' } }} className="unauthenticated-button">
+              Generate Recipe
             </button>
           </Link>
           <Link to="/login">
