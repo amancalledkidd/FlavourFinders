@@ -1,10 +1,10 @@
-# FlavourFinders
+# FlavourFinder
 Welcome to our group's repo! 👋
 This a final group project created during Makers Bootcamp.
 
 
 # 📌 What is FlavourFinder?
-Introducing FlavorFinder: Your Culinary Inspiration, Powered by AI
+Introducing FlavourFinder: Your Culinary Inspiration, Powered by AI
 
 Tired of the same old recipes and culinary routines? Enter FlavourFinder, your passport to a world of exciting and delicious food ideas, all crafted with the help of AI innovation. Say goodbye to mealtime monotony and let our AI-driven web app infuse your kitchen with fresh flavors and inspiration. From quick weeknight meals to gourmet delights, FlavorFinder is your key to culinary creativity. Join us on a journey where AI redefines your relationship with food, one delectable idea at a time. 
 
