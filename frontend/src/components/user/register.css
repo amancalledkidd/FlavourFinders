@@ -1,18 +1,18 @@
 
 
+
 .inner_background{
   display: flex;
   background-image: radial-gradient(circle, rgb(244, 252, 255), rgb(220, 250, 255), rgb(103, 189, 255));
   margin-top: 100px;  
   width: 530px;
-  height: 530px; 
-  padding-top: 30px;
+  height: 680px; 
   border-radius: 20px;
   text-align: center;
   font-family: sans-serif;
   font-size: 20px;
   border: 0;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
   border-width: 2px;
   color: rgb(49, 49, 84);
 }
@@ -26,6 +26,9 @@ body{
 
 input{
   color: rgb(49, 49, 84);
+  border-radius: 20px;
+  /* text-align: left; */
+  padding-left: 10px;
 }
 
 .input_fields{
@@ -54,11 +57,12 @@ input{
 
 #password_title {
   padding-right: 7px;
+  text-align: left;
 }
 
-input {
-  padding: 10px;
-  border-radius: 5px;
+#confirm_password_title {
+  text-indent: -19px;
+  padding-left: 4px;
 }
 
 #name_title, #email_title {
@@ -66,14 +70,13 @@ input {
 }
 
 .register_button{
-  margin-left: 0px;
-  height: 60px;
-  width: 100px;
-  border-radius: 5px;
+  margin-left: 60px;
+  height: 40px;
+  width: 90px;
+  border-radius: 10px;
   background-color: white;
   border: 0;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
   /* padding: 20px; */
 }
 
@@ -83,22 +86,59 @@ input {
 }
 
 .reminder_msg{
-  display: flex;
-  flex-direction: column;
+  align-items: left;
   font-size: 13px;
-  margin-right: 100px;
-  margin-bottom: 0px;
-  padding-top: 10px;
+  padding-left: 20px;
+  padding-top: 23px;
+  
 }
 
 .link {
-  position: absolute;
-  top: 571px;
-  left: 660px;
-  display: flex;
-  flex-direction: column-reverse;
+  float: center;
+  padding-right: 300px;
+  padding-top: 35px;
   font-size: 13px;
-  text-align: center;
-  margin-left: 100px;
+}
+
+#registration {
+  font-size: 50px;
+}
+
+.bottom_content{
+  display: flex;
+  height: 90px;
+  justify-content: space-between;
+  overflow-x: auto;
+}
+
+.image_icons{
+  padding-right: 7px;
+  padding-top: 12px;
+}
+
+label{
+  padding-top: 14px;
+}
+
+.confirm_input_field{
+  display: flex;
+  width: 500px;
+  padding: 30px;
+  
+}
+
+.confirm_image_icon{
+  padding-left: 8px;
+  padding-right: 10px;
+  padding-top: 12px;
+}
+
+
+
+.error_message{
+  font-size: 13px;
+  color: red;
+  
+  padding-left: 50px;
 }
 

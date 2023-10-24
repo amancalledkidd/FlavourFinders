@@ -3,7 +3,7 @@ import lock from "../images/password.jpg";
 import user from "../images/user.jpg";
 import envelope from "../images/envelope.jpg";
 import { Link } from 'react-router-dom';
-
+import "../user/register.css"
 
 
 const SignUpForm = ({ navigate }) => {
@@ -15,9 +15,8 @@ const SignUpForm = ({ navigate }) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-
     if(!passwordValidating(password)){
-      setErrorMessage("Password not valid. Password must include an uppercase and lowercase character, a special character (@$!%*?&) and be a minimum of 8 characters")
+      setErrorMessage(<p className="error_message">Invalid password. Must contain uppercase, lowercase,<br/> a special character (@$!%*?&) and be a minimum of 8 characters</p>)
     }else if(password !== confirmPassword){
       setErrorMessage("Passwords do not match")
     }else {
@@ -69,7 +68,7 @@ const SignUpForm = ({ navigate }) => {
             <h1 id="registration">Register</h1>
             <form className="register_form" onSubmit={handleSubmit}>
               <div className="input_fields">
-              <img src={user} className="image_icons" alt="Girl in a jacket" width="24" height="24"/>
+              <img src={user} className="image_icons" alt="icon" width="24" height="24"/>
                 <label id="name_title" htmlFor="name" >
                   <strong >Name</strong>
                 </label>
@@ -99,7 +98,7 @@ const SignUpForm = ({ navigate }) => {
                 />
               </div>
               <div className="input_fields">
-              <img src={lock} className="image_icons" alt="Girl in a jacket" width="24" height="24"/>
+              <img src={lock} className="image_icons" alt="icon" width="24" height="24"/>
                 <label id="password_title" htmlFor="password">
                   <strong>Password</strong>
                 </label>
@@ -112,15 +111,15 @@ const SignUpForm = ({ navigate }) => {
                   onChange={handlePasswordChange}
                 />
               </div>
-              <div className="input_fields">
-              <img src={lock} className="image_icons" alt="Girl in a jacket" width="24" height="24"/>
-                <label id="password_title" htmlFor="password">
-                  <strong>Confrim Password</strong>
+              <div className="confirm_input_field">
+                <img src={lock} className="confirm_image_icon" alt="icon" width="24" height="24"/>
+                <label id="confirm_password_title" htmlFor="password">
+                  <strong>Re-enter <br/>Password</strong>
                 </label>
                 <input
                   id="password_input"
                   type="password"
-                  placeholder="Confrim Password"
+                  placeholder="Re-enter Password"
                   name="password"
                   value={confirmPassword}
                   onChange={handleConfirmPasswordChange}
