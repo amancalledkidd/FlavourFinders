@@ -1,36 +1,20 @@
-
-.big_background {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-
-
 .inner_background{
+  display:flex;
   background-image: radial-gradient(circle, rgb(244, 252, 255), rgb(220, 250, 255), rgb(103, 189, 255));
   margin-top: 100px;  
   width: 530px;
-  height: 680px; 
+  height: 750px; 
   border-radius: 20px;
   text-align: center;
   font-family: sans-serif;
   font-size: 20px;
   border: 0;
-  
   border-width: 2px;
   color: rgb(49, 49, 84);
-  display: flex;
-  flex-direction: center;  
+  margin-left: 60%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(18, 7, 119, 0.19);
 }
 
-/* body{
-  display: flex;
-  justify-content: center;  
-  
-
-} */
 
 input{
   color: rgb(49, 49, 84);
@@ -61,6 +45,7 @@ input{
   margin-right: 40px;
   width: 250px;
   height: 40px;
+  padding-left: 10px;
 }
 
 #password_title {
@@ -70,7 +55,7 @@ input{
 
 #confirm_password_title {
   text-indent: -19px;
-  padding-left: 4px;
+  margin-bottom: -20px;
 }
 
 #name_title, #email_title {
@@ -81,12 +66,15 @@ input{
   margin-left: 60px;
   height: 40px;
   width: 90px;
-  border-radius: 10px;
+  border-radius: 15px;
   background-color: white;
   border: 0;
+  margin-left: -10px;  
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  /* padding: 20px; */
+
 }
+
+
 
 .inner_bottom{
   padding-top: 30px;
@@ -112,12 +100,7 @@ input{
   font-size: 50px;
 }
 
-.bottom_content{
-  display: flex;
-  height: 90px;
-  justify-content: space-between;
-  overflow-x: auto;
-}
+
 
 .image_icons{
   padding-right: 7px;
@@ -132,6 +115,7 @@ label{
   display: flex;
   width: 500px;
   padding: 30px;
+  padding-top: -80px;
   
 }
 
@@ -146,7 +130,64 @@ label{
 .error_message{
   font-size: 13px;
   color: red;
+  position: inherit;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.already_account_prompt{
+  text-align: left;
+  font-size: 15px;
+  padding-left: 15px;
+  padding-top: 35px;
+  position: absolute;
+  display: flex;
+}
+
+.register_form{
+  height: 550px
+}
+
+ .big_background{
+ float: left;
+ width: 100%
+} 
+.robot_image{
+  padding-top: 10px;
+  width: 60%;
+  height: auto;
+  float: left;
+  /* left: 250px; */
+  padding-top: 10%;
+  filter: drop-shadow(20px 5px 17px #c6c6d6);
+
+}
+
+
+.box3 {
+  font-family: Cursive ;
+  align-content: center;
+  width: auto;
+  right: 100px ;
+  color: #3a405a;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  font-size: 50px;
+  filter: drop-shadow(20px 5px 17px #ffffff);
+ 
   
-  padding-left: 50px;
+}
+
+
+/* speech bubble 13 */
+
+
+
+
+
+.robot_image{
+ display: flex;
+
 }
 
