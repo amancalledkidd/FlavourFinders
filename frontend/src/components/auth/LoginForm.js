@@ -3,6 +3,7 @@ import lock from "../images/password.jpg";
 import envelope from "../images/envelope.jpg";
 import robot from "../images/FlavourFinderLogo.png";
 import "../auth/Login.css"
+import Nav from '../nav/nav';
 
 import { Link } from 'react-router-dom';
 
@@ -44,6 +45,7 @@ const LogInForm = ({ navigate }) => {
 
   return (
     <div className='big_background'>
+      <Nav />
       <div className="robot_image robot_and_speech">
         <img src={robot} className="robot_image" />
         <div class="box3">
