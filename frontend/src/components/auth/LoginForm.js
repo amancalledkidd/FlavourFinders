@@ -24,8 +24,7 @@ const LogInForm = ({ navigate }) => {
 
     if(response.status !== 201) {
       let data = await response.json();
-      setErrorMessage("Incorrect email or password");
-      //navigate('/login')
+      setErrorMessage(<p className="error_message">Incorrect email or password</p>);
     } else {
       console.log("yay")
       let data = await response.json()
@@ -45,59 +44,59 @@ const LogInForm = ({ navigate }) => {
 
     return (
       <div className='big_background'> 
-     <div className="robot_image robot_and_speech">
-        <img src={robot} className="robot_image" />
-        <div class="box3">
+        <div className="robot_image robot_and_speech">
+          <img src={robot} className="robot_image" />
+          <div class="box3">
           <strong>Sign in to access delicious recipes and view your favourites!</strong>
-          </div>
-      </div>
-    <div className="login_inner_background" >
-      <div className="text_color">
-        <h1 id="registration">Login</h1>
-        <form className="login_register_form" onSubmit={handleSubmit}>   
+        </div>
+        </div>
+          <div className="login_inner_background" >
+          <div className="text_color">
+          <h1 id="registration">Login</h1>
+          <form className="login_register_form" onSubmit={handleSubmit}>   
           <div className="login_input_fields">
-            <label id="email_title" htmlFor="email">
-            <img src={envelope} className="login_image_icons" alt="icon" width="24" height="24"/>
-              <strong>Email</strong>
-            </label>
-            <input
-            id="email_input"
-              type="email"
-              placeholder="Enter Email"
-              autoComplete="off"
-              name="email"
-              value={email}
-              onChange={handleEmailChange}
-            />
+          <label id="email_title" htmlFor="email">
+          <img src={envelope} className="login_image_icons" alt="icon" width="24" height="24"/>
+          <strong>Email</strong>
+          </label>
+          <input
+          id="email_input"
+          type="email"
+          placeholder="Enter Email"
+          autoComplete="off"
+          name="email"
+          value={email}
+          onChange={handleEmailChange}
+          />
           </div>
           <div className="login_input_fields">
-            <label id="password_title" htmlFor="password">
-            <img src={lock} className="login_image_icons" alt="icon" width="24" height="24"/>
-              <strong>Password</strong>
-            </label>
-            <input
-            id="password_input"
-              type="password"
-              placeholder="Enter Password"
-              name="password"
-              value={password}
-              onChange={handlePasswordChange}
-            />
+          <label id="password_title" htmlFor="password">
+          <img src={lock} className="login_image_icons" alt="icon" width="24" height="24"/>
+          <strong>Password</strong>
+          </label>
+          <input
+          id="password_input"
+          type="password"
+          placeholder="Enter Password"
+          name="password"
+          value={password}
+          onChange={handlePasswordChange}
+          />
           </div>
           <p className="error">{errorMessage}</p>
           <button type="submit" className="login_button">
-            Login
+          Login
           </button>
-        </form>
-        <div className="login_already_account_prompt">
+          </form>
+          <div className="login_already_account_prompt">
           <p>
-            Create an account
-            <Link to="/signup"> SignUp</Link>
+          Create an account
+          <Link to="/signup"> SignUp</Link>
           </p>
-        </div>
+          </div>
+          </div>
+          </div>
       </div>
-    </div>
-    </div>
     );
 }
 
