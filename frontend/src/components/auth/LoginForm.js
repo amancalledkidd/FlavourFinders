@@ -29,7 +29,7 @@ const LogInForm = ({ navigate }) => {
       console.log("yay")
       let data = await response.json()
       window.localStorage.setItem("token", data.token)
-      navigate('/generator');
+      navigate('/');
     }
   }
 
@@ -44,6 +44,7 @@ const LogInForm = ({ navigate }) => {
 
     return (
       <div className='big_background'> 
+<<<<<<< HEAD
         <div className="robot_image robot_and_speech">
           <img src={robot} className="robot_image" />
           <div class="box3">
@@ -54,6 +55,18 @@ const LogInForm = ({ navigate }) => {
           <div className="text_color">
           <h1 id="registration">Login</h1>
           <form className="login_register_form" onSubmit={handleSubmit}>   
+=======
+     <div className="robot_image robot_and_speech">
+        <img src={robot} className="robot_image" />
+        <div class="box3">
+          <strong>Login to access delicious recipes and view your favourites!</strong>
+          </div>
+      </div>
+    <div className="login_inner_background" >
+      <div className="text_color">
+        <h1 id="registration">Login</h1>
+        <form className="login_register_form" onSubmit={handleSubmit}>   
+>>>>>>> e7b786bc2ba734ced0ec73cf886c1f30b64cbe6f
           <div className="login_input_fields">
           <label id="email_title" htmlFor="email">
           <img src={envelope} className="login_image_icons" alt="icon" width="24" height="24"/>

@@ -1,0 +1,39 @@
+.loading-message-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.loading-message {
+    display: flex;
+    text-align: center;
+    text-transform: uppercase;
+    background-image: linear-gradient(
+        -225deg,
+        #000c5c 0%,
+        #05b7f8 29%,
+        #e76305 67%,
+        #ffc832 100%
+    );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+        font-size: 36px;
+}
+
+
+
+    @keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}

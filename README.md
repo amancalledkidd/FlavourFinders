@@ -1,5 +1,12 @@
-# Team: FlavourFinder
-FlavourFinder is a WebApp that aims to help users get food ideas based on what their available ingredients, dietary requirements and cooking time. 
+# FlavourFinder
+Welcome to our group's repo! 👋
+This a final group project created during Makers Bootcamp.
+
+
+# 📌 What is FlavourFinder?
+Introducing FlavourFinder: Your Culinary Inspiration, Powered by AI
+
+Tired of the same old recipes and culinary routines? Enter FlavourFinder, your passport to a world of exciting and delicious food ideas, all crafted with the help of AI innovation. Say goodbye to mealtime monotony and let our AI-driven web app infuse your kitchen with fresh flavors and inspiration. From quick weeknight meals to gourmet delights, FlavorFinder is your key to culinary creativity. Join us on a journey where AI redefines your relationship with food, one delectable idea at a time. 
 
 
 ## 🤝 Our Team
@@ -24,19 +31,21 @@ Backend
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 
 
-## Planning
+## 📝 Tools used for planning
 🗃 Documentation
 https://github.com/amancalledkidd/FlavourFinders/blob/main/DOCUMENTATION.md
 
-🎨 Miro:
+🎨 Miro: Tool used to create a blueprint for our project
+![Miro](https://img.shields.io/badge/miro-#050038)
 https://miro.com/app/board/uXjVNaVz6L4=/
 
-🎫 Trello
+🎫 Trello: Tool used to manage our tickets
 https://trello.com/b/HSR93dPz/tickets
 
-## Quickstart
 
-### Install Node.js
+## 🌟 Quickstart
+
+### Step 1: Install Node.js
 
 1. Install Node Version Manager (NVM)
    ```
@@ -49,7 +58,7 @@ https://trello.com/b/HSR93dPz/tickets
    nvm install 18
    ```
 
-### Set up your project
+### Step 2: Set up your project
 
 1. Fork this repository
 2. Rename your fork to `FlavourFinders-<team name>`
@@ -58,11 +67,23 @@ https://trello.com/b/HSR93dPz/tickets
    ```
    ; cd api
    ; npm install
+   ; npm dotenv
    ; cd ../frontend
    ; npm install
+   ; npm install bootstrap
    ```
+In addition, you will need to create a ".env" file in your api directory.
+This file will serve as your secure container for your API Key.
+Side Note: You will need to create your own API Key via `https://openai.com/` so that you can use this project.
 
-> You might get warning messages about the installed dependencies at this point. You can ignore them, as long as the installation process doesn't fail. If the setup fails at this point, don't wait for too long and reach out to your coach.
+Your ".env" file should look like the below:
+   ```
+   ; const env = {
+   ;   OPEN_API_KEY = 'paste your API Key here'
+   ; }
+   ```
+   ❗️ Note ❗️
+   > You might get warning messages about the installed dependencies at this point. You can ignore them, as long as the installation process doesn't fail. 
 
 5. Install an ESLint plugin for your editor. For example: [`linter-eslint`](https://github.com/AtomLinter/linter-eslint) for Atom.
 6. Install MongoDB
@@ -70,36 +91,42 @@ https://trello.com/b/HSR93dPz/tickets
    brew tap mongodb/brew
    brew install mongodb-community@5.0
    ```
-   *Note:* If you see a message that says `If you need to have mongodb-community@5.0 first in your PATH, run:`, follow the instruction. Restart your terminal after this.
+   ❗️ Note ❗️
+   If you see a message that says `If you need to have mongodb-community@5.0 first in your PATH, run:`, follow the instruction. Restart your terminal after this.
 7. Start MongoDB
    ```
    brew services start mongodb-community@5.0
    ```
 
-### How to run the server and use the app (as a human)
+### Step 3: How to run the server and use the app (as a human)
 
-1. Start the server application (in the `api` directory)
-
-  **Note the use of an environment variable for the JWT secret**
+1. Open a terminal, navigate to your `api` directory and start your server by using the below code:
 
    ```
    ; cd api
    ; JWT_SECRET=f6d278bb34e1d0e146a80b16ec254c05 npm start
    ```
-2. Start the front end application (in the `frontend` directory)
 
-  In a new terminal session...
+   ❗️ Note ❗️
+   The below is an environment variable used for the JWT secret.
+   "JWT_SECRET=f6d278bb34e1d0e146a80b16ec254c05 npm start"
+   
+2. Open another terminal, navigate to your `frontend` directory and start your frontend application by using the below code:
 
   ```
   ; cd frontend
   ; npm start
   ```
 
-You should now be able to open your browser and go to `http://localhost:3000/signup` to create a new user.
+You should now be automatically re-directed to your web browser that will display the homepage of our webapp:
+`http://localhost:3000/`
 
-Then, after signing up, you should be able to log in by going to `http://localhost:3000/login`.
+In the homepage, the user can navigate the website without the need to sign-in or sign-up.
+However, should the user wishes to save a recipe, they will need to create an account to do so.
+Using the navbar at the top of the page, the user can click either the:
+* sign up button `http://localhost:3000/signup` or
+* login button `http://localhost:3000/login`
 
-After logging in, you won't see much but you can create posts using PostMan and they should then show up in the browser if you refresh the page.
 
 ### How to run automated tests
 
@@ -155,5 +182,3 @@ Some people occasionally experience MongoDB connection errors when running the t
 
 - Check that MongoDB is installed using `mongo --version`
 - Check that it's running using `brew services list`
-
-If you have issues that are not resolved by these tips, please reach out to a coach and, once the issue is resolved, we can add a new tip!
