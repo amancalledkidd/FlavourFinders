@@ -71,7 +71,15 @@ input[type="submit"]:hover {
 }
 
 .generator-page-title {
-    color: rgb(1, 13, 73);
+    background: linear-gradient(
+        #000c5c 0%,
+        #05b7f8 100%
+    );
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 56px;
+    padding-bottom: 20px;
 }
 
 

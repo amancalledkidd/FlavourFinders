@@ -9,6 +9,7 @@ import salmon from "../images/salmon.jpg"
 const PopularRecipe = () => {
     return(
         <>
+        <body className='popular-body'>
         <Navbar />
         <div className='page-content'>
             <div className='title'>
@@ -116,6 +117,7 @@ const PopularRecipe = () => {
                 </div>
             </div>
         </div>
+        </body>
         </>
     )
 }

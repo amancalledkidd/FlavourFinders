@@ -4,7 +4,8 @@ import "./home.css"
 import "../generator/Generator"
 import "../popular_recipes/PopularRecipes"
 import logo from '../images/logo.png'
-import Navbar from '../navbar/Navbar'
+import Navbar from '../navbar/Navbar';
+
 
 
 function Home(){

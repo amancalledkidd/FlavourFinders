@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import MyRecipeBox from "../my_recipes_boxes/myRecipesBox";
-import Navbar from '../navbar/Navbar'
+import Navbar from "../navbar/Navbar"
+import "./myRecipes.css"
 
 const MyRecipes = () => {
     const [recipeList, setRecipeList] = useState([]);
@@ -23,7 +24,7 @@ const MyRecipes = () => {
             .then(async data => {
                 window.localStorage.setItem("token", data.token)
                 setToken(window.localStorage.getItem("token"))
-                setRecipeList(data.recipes)
+                setRecipeList(data.recipes.reverse());
             })
         }
     }
@@ -49,12 +50,16 @@ const MyRecipes = () => {
 
     return (
         <>
-        <Navbar />
-        {recipeList.map(
-            (recipe) => ( <MyRecipeBox recipe={ recipe } key={ recipe._id } handleDeleteRecipeSubmit={handleDeleteRecipeSubmit}/> )
-        )}
-        <br/>
-        <a href="/generator">Recipe Generator</a>
+            <Navbar />
+            <br/>
+            <div className="recipes-page">
+                <h1 className="my-recipes-title">My Recipes</h1>
+                <div className="recipes-page-items">
+                    {recipeList.map(
+                        (recipe) => ( <MyRecipeBox recipe={ recipe } key={ recipe._id } handleDeleteRecipeSubmit={handleDeleteRecipeSubmit}/> )
+                    )}
+                </div>
+            </div>
         </>
     )
 

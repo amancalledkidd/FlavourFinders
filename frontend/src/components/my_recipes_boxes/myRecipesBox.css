@@ -1,0 +1,50 @@
+.recipe-box-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    min-width: 400px;
+    margin: 2rem;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    --b: 8px;     /* the border thickness*/
+    --g: 14px;    /* the gap */
+    --c: rgba(220, 154, 69, 0.99); /* the color */
+    width: 100;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.recipe-box-container:hover {
+    outline: var(--b) solid var(--c);
+    outline-offset: var(--g);
+}
+
+.recipe-link {
+    text-decoration: none;
+    color: black;
+}
+
+.recipe-delete-button {
+    background: none;
+    color: rgba(220, 154, 69, 0.99);
+    border: 0.5px solid rgb(196, 196, 196);
+    padding: 20px;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    float: right;
+}
+
+.recipe-delete-button:hover {
+    background-color: #0252a7;
+    color: white;
+}
+
+.recipe-sub-head{
+    font-weight: 700;
+    padding-right: 5px;
+}

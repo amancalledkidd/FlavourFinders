@@ -15,6 +15,7 @@ const Generator = ({ navigate }) => {
     const [ingredients, setIngredients] = useState("")
     const [generatorRecipe, setGeneratorRecipe] = useState("")
     const [loading, setLoading] = useState(false)
+    const [showSaveButton, setShowSaveButton] = useState(true)
     
 
     const handleMealTypeChange = (event) => {
@@ -39,6 +40,7 @@ const Generator = ({ navigate }) => {
 
     const handleFormSubmit = (e) => {
         e.preventDefault()
+        setShowSaveButton(true)
         setLoading(true)
         // change fetch url to new one 
         fetch('/generator', {
@@ -75,6 +77,7 @@ const Generator = ({ navigate }) => {
             console.log("Recipe has been successfully saved")
             console.log(data.token)
             console.log(data.message)
+            setShowSaveButton(false)
         })
     }
 
@@ -89,11 +92,14 @@ const Generator = ({ navigate }) => {
         <div className="generator-logo-container">
             <img src={logo} className="generator-logo" alt="logo"/> 
         </div>
+        
 
         { (!loading && !generatorRecipe ) &&
+        
         <div className="generator">
+            <h1 className="generator-page-title"> Recipe Generator </h1>
             <form onSubmit={handleFormSubmit}>
-                <h2 className="generator-page-title"> Recipe Generator </h2>
+                
                 <h3 className="generator-field-title">Meal type</h3>
                 <div className="dropdown">
                     <select className="dropdown" id="mealType" type="mealType" value={mealType} onChange={handleMealTypeChange}>
@@ -163,9 +169,11 @@ const Generator = ({ navigate }) => {
 
         { generatorRecipe && 
             <>
-            <Recipe recipe={generatorRecipe}/>
+            <Recipe recipe={generatorRecipe} navigate={navigate} setShowSaveButton={setShowSaveButton}/>
             <div className="recipe-button-container">
+                { showSaveButton &&
                 <button id="recipe-button-save" className="recipe-button" onClick={handleSaveRecipeSubmit}>Save Recipe</button>
+                }
                 <button className="recipe-button" onClick={handleNewRecipe} >Generate New Recipe</button>
             </div>
             </>

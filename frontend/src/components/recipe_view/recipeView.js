@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Recipe from "../recipe/recipe";
+import "./recipeView.css"
 
 const RecipeView = ({ navigate }) => {
     const [currentRecipe, setCurrentRecipe] = useState(window.localStorage.getItem("currentRecipe"))
@@ -13,7 +14,9 @@ const RecipeView = ({ navigate }) => {
         <>
         <Recipe recipe={currentRecipe}/>
         <br/>
-        <button onClick={resetCurrentRecipe}>Go back to my recipes</button>
+        <div className="back-to-recipes-container">
+            <button className="back-to-recipes-button" onClick={resetCurrentRecipe}>Go back to my recipes</button>
+        </div>
         </>
     )
 }
