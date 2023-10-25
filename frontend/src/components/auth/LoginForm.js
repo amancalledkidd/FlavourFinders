@@ -48,7 +48,7 @@ const LogInForm = ({ navigate }) => {
      <div className="robot_image robot_and_speech">
         <img src={robot} className="robot_image" />
         <div class="box3">
-          <strong>Sign in to access delicious recipes and view your favourites!</strong>
+          <strong>Login in to access delicious recipes and view your favourites!</strong>
           </div>
       </div>
     <div className="login_inner_background" >
