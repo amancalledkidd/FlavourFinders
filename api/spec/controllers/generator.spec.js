@@ -9,12 +9,22 @@ require('jest-fetch-mock').enableMocks()
 //to /generator route and when there is one
 
 describe("Generator Controller Mocking API Calls", () => {
-    it('Sends a message and gets a response', (done) => {
+    it('Sends a message and gets a response', () => {
 
         const message = {
             body: {
             prompt: "Test prompt from frontend"
         }}
+
+        const mockResponse = {
+            status: function(code) {
+                expect(code).toEqual(200)
+                return this
+            },
+            send: function(messageObject) {
+                expect(messageObject.message).toEqual("*Title: Vegan Indian Chana Masala")
+            }
+        }
 
         fetch.mockResponseOnce(JSON.stringify({
             "choices": [
@@ -39,10 +49,7 @@ describe("Generator Controller Mocking API Calls", () => {
         }
         ))
 
-        GeneratorController.Create(message, (returnedDataFromApi) => {
-            expect(returnedDataFromApi.choices[0].message.content).toEqual("*Title: Vegan Indian Chana Masala")
-            done()
-        })
+        return GeneratorController.Create(message, mockResponse)
     }) 
 })
 
