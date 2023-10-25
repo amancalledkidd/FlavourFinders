@@ -1,7 +1,4 @@
-.popular-body {
-    color: slategrey;
-    font-family: 'Georgia', sans-serif;
-    /* line-height: 20px; */
+body {
     background-color: #fffbff;
     display: flex;
     flex-wrap: wrap;
@@ -30,7 +27,7 @@
 .grid-container {
     display: flex;
     justify-content: center;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 33.33% 3.33% 33.33%;
     grid-template-rows: auto;
     grid-template-rows: max-content;
     column-gap: 20px;
@@ -38,18 +35,22 @@
 }
 
 .grid-item {
-    padding: 2% 2% 2% 2%;
+    padding: 2% 2% 2% 3%;
+    align-items: center;
 }
 
 .dish-name {
     color: darkcyan;
     font-size: 150%;
+    font-family: 'Georgia', sans-serif;
     letter-spacing: 1%;
 }
 
 .dish-img {
     width: 400px;
     height: 400px;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .dish-img:hover {
@@ -57,16 +58,21 @@
     transform: scale(1.1);
 }
 
-.popular-body p {
+
+.bullet-titles {
     color: darksalmon;
     font-size: 125%;
     font-weight: bold;
+    font-family: 'Georgia', sans-serif;
 }
 
-li {
+li, .coleslaw {
     font-size: 100%;
     line-height: 20px;
+    color: slategrey;
+    font-family: 'Georgia', sans-serif;
 }
+
 
 /* auto-resize & adjust grids to fit user's */
 @media screen and (max-width: 700px) {

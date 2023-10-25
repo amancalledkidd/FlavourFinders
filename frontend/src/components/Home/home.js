@@ -7,12 +7,11 @@ import logo from '../images/logo.png'
 import Navbar from '../navbar/Navbar';
 
 
+
 function Home(){
     return (
         <>
-        <div className= "navbar">
             <Navbar/>
-        </div>
             <div className = "border">
                 <img className="logo" src={logo} alt="Robot chef" />
                 <h2 className = "slogan">Season the Day!</h2>

@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import lock from "../images/password.jpg";
 import envelope from "../images/envelope.jpg";
-import background from "../images/background.jpg";
+import robot from "../images/FlavourFinderLogo.png";
+import "../auth/Login.css"
+
 import { Link } from 'react-router-dom';
 
 const LogInForm = ({ navigate }) => {
@@ -28,7 +30,7 @@ const LogInForm = ({ navigate }) => {
       console.log("yay")
       let data = await response.json()
       window.localStorage.setItem("token", data.token)
-      navigate('/generator');
+      navigate('/');
     }
   }
 
@@ -43,14 +45,19 @@ const LogInForm = ({ navigate }) => {
 
     return (
       <div className='big_background'> 
-      {/* <img src={background} className="image_icons" alt="Girl in a jacket"/> */}
-    <div className="inner_background" >
+     <div className="robot_image robot_and_speech">
+        <img src={robot} className="robot_image" />
+        <div class="box3">
+          <strong>Login to access delicious recipes and view your favourites!</strong>
+          </div>
+      </div>
+    <div className="login_inner_background" >
       <div className="text_color">
         <h1 id="registration">Login</h1>
-        <form className="register_form" onSubmit={handleSubmit}>   
-          <div className="mb-3">
+        <form className="login_register_form" onSubmit={handleSubmit}>   
+          <div className="login_input_fields">
             <label id="email_title" htmlFor="email">
-            <img src={envelope} className="image_icons" alt="email" width="24" height="24"/>
+            <img src={envelope} className="login_image_icons" alt="icon" width="24" height="24"/>
               <strong>Email</strong>
             </label>
             <input
@@ -63,9 +70,9 @@ const LogInForm = ({ navigate }) => {
               onChange={handleEmailChange}
             />
           </div>
-          <div className="mb-3">
+          <div className="login_input_fields">
             <label id="password_title" htmlFor="password">
-            <img src={lock} className="image_icons" alt="Girl in a jacket" width="24" height="24"/>
+            <img src={lock} className="login_image_icons" alt="icon" width="24" height="24"/>
               <strong>Password</strong>
             </label>
             <input
@@ -78,14 +85,14 @@ const LogInForm = ({ navigate }) => {
             />
           </div>
           <p className="error">{errorMessage}</p>
-          <button type="submit" className="register_button">
+          <button type="submit" className="login_button">
             Login
           </button>
         </form>
-        <div className='inner_bottom'>
+        <div className="login_already_account_prompt">
           <p>
-            make an account
-            <Link to="/signup">SignUp</Link>
+            Create an account
+            <Link to="/signup"> SignUp</Link>
           </p>
         </div>
       </div>

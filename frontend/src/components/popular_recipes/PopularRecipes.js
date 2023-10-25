@@ -20,9 +20,8 @@ const PopularRecipe = () => {
                 <div className='grid-item'>
                     <h3 className='dish-name'>Pasta Aglio e Olio</h3>
                     <img className='dish-img' src={pasta} alt='Pasta Aglio e Olio'/>
-                    <p>Cooking Time: 15 minutes</p>
-                    <br />
-                    <p>Ingredients</p>
+                    <p className='bullet-titles'>Cooking Time: 15 minutes</p>
+                    <p className='bullet-titles'>Ingredients</p>
                         <ul>
                             <li>8 oz (225g) spaghetti or any pasta of your choice</li>
                             <li>4 cloves of garlic, thinly sliced</li>
@@ -31,8 +30,7 @@ const PopularRecipe = () => {
                             <li>Salt and pepper to taste</li>
                             <li>Fresh parsley, chopped (for garnish)</li>
                         </ul>
-                        <br />
-                    <p>Instructions</p>
+                    <p className='bullet-titles'>Instructions</p>
                         <ol>
                             <li>
                                 Cook the pasta in a large pot of salted boiling water according to the package instructions until al dente. Drain and set aside.
@@ -49,9 +47,8 @@ const PopularRecipe = () => {
                 <div className='grid-item'>
                     <h3 className='dish-name'>Nutty chicken satay strips</h3>
                     <img className='dish-img' src={chicken} alt='Chicken Satay'/>
-                    <p>Cooking Time: 20 minutes</p>
-                    <br />
-                    <p>Ingredients</p>
+                    <p className='bullet-titles'>Cooking Time: 20 minutes</p>
+                    <p className='bullet-titles'>Ingredients</p>
                         <ul>
                             <li>2 tbsp chunky peanut butter (without palm oil or sugar)</li>
                             <li>1 garlic clove, finely grated</li>
@@ -62,8 +59,7 @@ const PopularRecipe = () => {
                             <li>about 10cm cucumber, cut into fingers</li>
                             <li>sweet chilli sauce, to serve</li>
                         </ul>
-                        <br />
-                    <p>Instructions</p>
+                    <p className='bullet-titles'>Instructions</p>
                         <ol>
                             <li>
                                 Heat oven to 200C/180C fan/gas 4 and line a baking tray with non-stick paper.
@@ -82,15 +78,15 @@ const PopularRecipe = () => {
                 <div className='grid-item'>
                     <h3 className='dish-name'>Sticky sweet chilli ginger salmon</h3>
                     <img className='dish-img' src={salmon} alt='Salmon'/>
-                    <p>Cooking Time: 20 minutes</p>
-                    <br />
-                    <p>Ingredients</p>
+                    <p className='bullet-titles'>Cooking Time: 20 minutes</p>
+                    <p className='bullet-titles'>Ingredients</p>
                         <ul>
                             <li>125ml (1/2 cup) sweet chilli sauce</li>
                             <li>2 tbsp soy sauce</li>
                             <li>1 tbsp finely grated fresh ginger</li>
                             <li>4 x 200g skinless salmon fillets</li>
-                            <br />Honey sesame coleslaw
+                            <br />
+                            <p className='coleslaw'>Honey sesame coleslaw:</p>
                             <li>80ml (1/3 cup) apple cider vinegar</li>
                             <li>2 tbsp honey</li>
                             <li>2 tbsp sesame oil</li>
@@ -100,8 +96,7 @@ const PopularRecipe = () => {
                             <li>1 carrot, julienned into long strips</li>
                             <li>1 cup fresh mint leaves, plus extra 2 tbsp, to serve</li>
                         </ul>
-                        <br />
-                    <p>Instructions</p>
+                    <p className='bullet-titles'>Instructions</p>
                     <ol>
                         <li>
                             Preheat the grill on high. Combine the sweet chilli sauce, soy sauce and ginger in a large bowl. Add the salmon and gently mix until evenly coated. Set aside to marinate while you make the coleslaw.
