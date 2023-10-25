@@ -72,7 +72,6 @@ const SignUpForm = ({ navigate }) => {
         <div className="inner_background" >
           <div className="text_color">
             <h1 id="registration">Register</h1>
-            <i class="fa-thin fa-comment"></i>
             <form className="register_form" onSubmit={handleSubmit}>
               <div className="input_fields">
               <img src={user} className="image_icons" alt="icon" width="24" height="24"/>

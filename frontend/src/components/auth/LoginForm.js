@@ -45,16 +45,19 @@ const LogInForm = ({ navigate }) => {
 
     return (
       <div className='big_background'> 
-      <div>
+     <div className="robot_image robot_and_speech">
         <img src={robot} className="robot_image" />
+        <div class="box3">
+          <strong>Sign in to access delicious recipes and view your favourites!</strong>
+          </div>
       </div>
-    <div className="inner_background" >
+    <div className="login_inner_background" >
       <div className="text_color">
         <h1 id="registration">Login</h1>
-        <form className="register_form" onSubmit={handleSubmit}>   
-          <div className="input_fields">
+        <form className="login_register_form" onSubmit={handleSubmit}>   
+          <div className="login_input_fields">
             <label id="email_title" htmlFor="email">
-            <img src={envelope} className="image_icons" alt="icon" width="24" height="24"/>
+            <img src={envelope} className="login_image_icons" alt="icon" width="24" height="24"/>
               <strong>Email</strong>
             </label>
             <input
@@ -67,9 +70,9 @@ const LogInForm = ({ navigate }) => {
               onChange={handleEmailChange}
             />
           </div>
-          <div className="input_fields">
+          <div className="login_input_fields">
             <label id="password_title" htmlFor="password">
-            <img src={lock} className="image_icons" alt="icon" width="24" height="24"/>
+            <img src={lock} className="login_image_icons" alt="icon" width="24" height="24"/>
               <strong>Password</strong>
             </label>
             <input
@@ -82,14 +85,14 @@ const LogInForm = ({ navigate }) => {
             />
           </div>
           <p className="error">{errorMessage}</p>
-          <button type="submit" className="register_button">
+          <button type="submit" className="login_button">
             Login
           </button>
         </form>
-        <div className='inner_bottom'>
+        <div className="login_already_account_prompt">
           <p>
-            make an account
-            <Link to="/signup">SignUp</Link>
+            Create an account
+            <Link to="/signup"> SignUp</Link>
           </p>
         </div>
       </div>
