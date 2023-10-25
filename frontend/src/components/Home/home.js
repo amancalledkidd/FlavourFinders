@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import "./home.css"
 import "../generator/Generator"
 import "../popular_recipes/PopularRecipes"
-import logo from '../images/logo.png'
+import logo2 from '../images/logo2.png'
 import Navbar from '../navbar/Navbar';
 
 
@@ -13,7 +13,7 @@ function Home(){
         <>
             <Navbar/>
             <div className = "border">
-                <img className="logo" src={logo} alt="Robot chef" />
+                <img className="logo" src={logo2} alt="Robot chef" />
                 <h2 className = "slogan">Season the Day!</h2>
             </div>
             <div className="intro_text">
