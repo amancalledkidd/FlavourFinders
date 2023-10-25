@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import lock from "../images/password.jpg";
 import envelope from "../images/envelope.jpg";
-import background from "../images/background.jpg";
 
 const LogInForm = ({ navigate }) => {
   const [email, setEmail] = useState("");

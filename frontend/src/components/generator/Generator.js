@@ -70,6 +70,7 @@ const Generator = ({ navigate }) => {
             console.log("Recipe has been successfully saved")
             console.log(data.token)
             console.log(data.message)
+            setToken(data.token)
         })
     }
 
