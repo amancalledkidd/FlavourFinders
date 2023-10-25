@@ -61,3 +61,11 @@ input {
   padding-top: 12px;
   position: inherit;
 }
+
+.error_message {
+  font-size: 13px;
+  color: red;
+  position: inherit;
+  padding-right: 7%;
+  padding-left: 7%;
+}

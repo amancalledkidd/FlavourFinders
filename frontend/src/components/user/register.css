@@ -1,9 +1,9 @@
-.inner_background{
-  display:flex;
+.inner_background {
+  display: flex;
   background-image: radial-gradient(circle, rgb(244, 252, 255), rgb(220, 250, 255), rgb(103, 189, 255));
-  margin-top: 100px;  
+  margin-top: 100px;
   width: 530px;
-  height: 750px; 
+  height: 750px;
   border-radius: 20px;
   text-align: center;
   font-family: sans-serif;
@@ -16,27 +16,28 @@
 }
 
 
-input{
+input {
   color: rgb(49, 49, 84);
   border-radius: 20px;
   /* text-align: left; */
   padding-left: 10px;
 }
 
-.input_fields{
+.input_fields {
   width: 500px;
   padding: 30px 5px;
   display: flex;
   justify-content: center;
 }
 
-#name_input, #email_input {
+#name_input,
+#email_input {
   margin-right: 30px;
   width: 250px;
   height: 40px;
   border: 0;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-   
+
 }
 
 #password_input {
@@ -58,35 +59,36 @@ input{
   margin-bottom: -20px;
 }
 
-#name_title, #email_title {
+#name_title,
+#email_title {
   padding-right: 30px;
 }
 
-.register_button{
+.register_button {
   margin-left: 60px;
   height: 40px;
   width: 90px;
   border-radius: 15px;
   background-color: white;
   border: 0;
-  margin-left: -10px;  
+  margin-left: -10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 }
 
 
 
-.inner_bottom{
+.inner_bottom {
   padding-top: 30px;
-  
+
 }
 
-.reminder_msg{
+.reminder_msg {
   align-items: left;
   font-size: 13px;
   padding-left: 20px;
   padding-top: 23px;
-  
+
 }
 
 .link {
@@ -102,24 +104,24 @@ input{
 
 
 
-.image_icons{
+.image_icons {
   padding-right: 7px;
   padding-top: 12px;
 }
 
-label{
+label {
   padding-top: 14px;
 }
 
-.confirm_input_field{
+.confirm_input_field {
   display: flex;
   width: 500px;
   padding: 30px;
   padding-top: -80px;
-  
+
 }
 
-.confirm_image_icon{
+.confirm_image_icon {
   padding-left: 8px;
   padding-right: 10px;
   padding-top: 12px;
@@ -127,15 +129,15 @@ label{
 
 
 
-.error_message{
+.error_message {
   font-size: 13px;
   color: red;
   position: inherit;
-  padding-right: 30px;
-  padding-left: 30px;
+  padding-right: 7%;
+  padding-left: 7%;
 }
 
-.already_account_prompt{
+.already_account_prompt {
   text-align: left;
   font-size: 15px;
   padding-left: 15px;
@@ -144,18 +146,18 @@ label{
   display: flex;
 }
 
-.register_form{
+.register_form {
   height: 550px
 }
 
- .big_background{
- float: left;
- width: 100%
-} 
-.robot_image{
+.big_background {
+  width: 100%
+}
+
+.robot_image {
   padding-top: 10px;
   width: 60%;
-  height: auto;
+  height: 60%;
   float: left;
   /* left: 250px; */
   padding-top: 10%;
@@ -165,18 +167,17 @@ label{
 
 
 .box3 {
-  font-family: Cursive ;
-  align-content: center;
+  display: flex;
+  font-family: Cursive;
   width: auto;
-  right: 100px ;
   color: #3a405a;
-  padding: 20px;
   text-align: center;
-  position: relative;
+  padding-right: 5%;
+  /* position: relative; */
   font-size: 50px;
   filter: drop-shadow(20px 5px 17px #ffffff);
- 
-  
+
+
 }
 
 
@@ -185,9 +186,7 @@ label{
 
 
 
-
-.robot_image{
- display: flex;
+.robot_image {
+  display: flex;
 
 }
-

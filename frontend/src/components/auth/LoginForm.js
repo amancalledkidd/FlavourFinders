@@ -24,8 +24,7 @@ const LogInForm = ({ navigate }) => {
 
     if (response.status !== 201) {
       let data = await response.json();
-      setErrorMessage("Incorrect email or password");
-      //navigate('/login')
+      setErrorMessage(<p className="error_message">Incorrect email or password</p>);
     } else {
       console.log("yay")
       let data = await response.json()
