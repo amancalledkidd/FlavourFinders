@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import lock from "../images/password.jpg";
 import envelope from "../images/envelope.jpg";
-import background from "../images/background.jpg";
+import robot from "../images/FlavourFinderLogo.png";
+import "../auth/Login.css"
+
 import { Link } from 'react-router-dom';
 
 const LogInForm = ({ navigate }) => {
@@ -43,14 +45,16 @@ const LogInForm = ({ navigate }) => {
 
     return (
       <div className='big_background'> 
-      {/* <img src={background} className="image_icons" alt="Girl in a jacket"/> */}
+      <div>
+        <img src={robot} className="robot_image" />
+      </div>
     <div className="inner_background" >
       <div className="text_color">
         <h1 id="registration">Login</h1>
         <form className="register_form" onSubmit={handleSubmit}>   
-          <div className="mb-3">
+          <div className="input_fields">
             <label id="email_title" htmlFor="email">
-            <img src={envelope} className="image_icons" alt="email" width="24" height="24"/>
+            <img src={envelope} className="image_icons" alt="icon" width="24" height="24"/>
               <strong>Email</strong>
             </label>
             <input
@@ -63,9 +67,9 @@ const LogInForm = ({ navigate }) => {
               onChange={handleEmailChange}
             />
           </div>
-          <div className="mb-3">
+          <div className="input_fields">
             <label id="password_title" htmlFor="password">
-            <img src={lock} className="image_icons" alt="Girl in a jacket" width="24" height="24"/>
+            <img src={lock} className="image_icons" alt="icon" width="24" height="24"/>
               <strong>Password</strong>
             </label>
             <input

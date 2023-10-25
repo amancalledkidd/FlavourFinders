@@ -1,0 +1,35 @@
+/* .inner_background{
+  display:flex;
+  background-image: radial-gradient(circle, rgb(244, 252, 255), rgb(220, 250, 255), rgb(103, 189, 255));
+  margin-top: 100px;  
+  width: 530px;
+  height: 750px; 
+  border-radius: 20px;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 20px;
+  border: 0;
+  border-width: 2px;
+  color: rgb(49, 49, 84);
+  margin-left: 60%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(18, 7, 119, 0.19);
+}
+
+input{
+  color: rgb(49, 49, 84);
+  border-radius: 20px;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.input_fields{
+  width: 500px;
+  padding: 30px 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.register_form{
+  height: 550px;
+  padding-top: 30%;
+} */

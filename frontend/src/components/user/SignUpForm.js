@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import lock from "../images/password.jpg";
 import user from "../images/user.jpg";
 import envelope from "../images/envelope.jpg";
+import robot from "../images/FlavourFinderLogo.png";
 import { Link } from 'react-router-dom';
 import "../user/register.css"
 
@@ -18,7 +19,7 @@ const SignUpForm = ({ navigate }) => {
     if(!passwordValidating(password)){
       setErrorMessage(<p className="error_message">Invalid password. Must contain uppercase, lowercase,<br/> a special character (@$!%*?&) and be a minimum of 8 characters</p>)
     }else if(password !== confirmPassword){
-      setErrorMessage("Passwords do not match")
+      setErrorMessage(<p className="error_message">Passwords do not match</p>)
     }else {
       fetch( '/users', {
         method: 'post',
@@ -35,7 +36,7 @@ const SignUpForm = ({ navigate }) => {
           }
         })
         .then((data) => {
-          setErrorMessage(data.message);
+          data.message = setErrorMessage(<p className="error_message">Email already exists. Please login or use a different email</p>);
         });
     }
   }
@@ -61,11 +62,17 @@ const SignUpForm = ({ navigate }) => {
 
 
     return (
-      <div className='big_background'> 
-          {/* <img src={background} className="image_icons" alt="Girl in a jacket"/> */}
+      <div className="big_background"> 
+      <div className="robot_image robot_and_speech">
+        <img src={robot} className="robot_image" />
+        <div class="box3">
+          <strong>Enter your details and create your account with us!</strong>
+          </div>
+      </div>
         <div className="inner_background" >
           <div className="text_color">
             <h1 id="registration">Register</h1>
+            <i class="fa-thin fa-comment"></i>
             <form className="register_form" onSubmit={handleSubmit}>
               <div className="input_fields">
               <img src={user} className="image_icons" alt="icon" width="24" height="24"/>
@@ -130,10 +137,10 @@ const SignUpForm = ({ navigate }) => {
                 Register
               </button>
             </form>
-            <div>
+            <div className="already_account_prompt">
               <p>
-                already have an account
-                <Link to="/login"> login</Link>
+                Already have an account? 
+                <Link to="/login"> Login</Link>
               </p>
             </div>
                 
