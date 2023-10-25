@@ -148,3 +148,20 @@ textarea {
     transition: 0.5s;
 
 }
+
+.join-us-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: linear-gradient(
+        #000c5c 0%,
+        #05b7f8 100%
+    );
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 20px;
+    padding-top: 10px;
+}
