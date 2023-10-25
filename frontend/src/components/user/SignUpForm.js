@@ -5,6 +5,7 @@ import envelope from "../images/envelope.jpg";
 import robot from "../images/FlavourFinderLogo.png";
 import { Link } from 'react-router-dom';
 import "../user/register.css"
+import Nav from '../nav/nav';
 
 
 const SignUpForm = ({ navigate }) => {
@@ -63,6 +64,7 @@ const SignUpForm = ({ navigate }) => {
 
     return (
       <div className="big_background"> 
+      <Nav />
       <div className="robot_image robot_and_speech">
         <img src={robot} className="robot_image" />
         <div class="box3">
