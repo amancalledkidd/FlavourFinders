@@ -16,7 +16,7 @@ const AuthenticatedNav = () => {
   return (
     <nav className="navbar">
         <div className="button-container">
-          <Link to="/">
+          <Link title='Home' to="/">
             <span className="brand">FlavourFinder</span>
           </Link>
           <Link title='Recipe Generator' className='links' to="/generator">
@@ -37,7 +37,7 @@ const UnauthenticatedNav = () => {
   return (
     <nav className="navbar">
         <div className="button-container">
-          <Link to="/">
+          <Link title='Home' to="/">
             <span className="brand">FlavourFinder</span>
           </Link>
           <Link title='Recipe Generator' className='links' to="/generator">
