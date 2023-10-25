@@ -1,11 +1,11 @@
 import './recipe.css'
 import React, { useState } from 'react';
 
-const Recipe = ({ recipe, navigate }) => {
+const Recipe = ({ recipe, navigate, setShowSaveButton }) => {
 
     function splitRecipe(recipeText) {
         let sections = recipeText.split("*");
-        // try {
+        try {
             let recipeObj = {
                 title: sections[1].slice(7),
                 intro: sections[2].slice(7),
@@ -17,10 +17,11 @@ const Recipe = ({ recipe, navigate }) => {
                 
             };
             return recipeObj;
-        // } catch (err) {
-        //     console.log(err);
-        //     return null;
-        // }
+        } catch (err) {
+            console.log(err)
+            setShowSaveButton(false);
+            return null;
+        }
         
     }
     let recipeObj = splitRecipe(recipe);
@@ -65,12 +66,12 @@ const Recipe = ({ recipe, navigate }) => {
             </div>
         </div> 
         }
-        {/* {!recipeObj &&
-        <div>
-            <h2>We have had some trouble finding your dish, please try again</h2>
-            <button className="regenerate-link" onClick={navigateToGenerator}>Generate New Recipe</button>
-        </div> */}
-        {/* } */}
+        {!recipeObj &&
+        <div className='error-container'>
+            <h2 className='error-text'>We have had some trouble finding your dish, please try again</h2>
+            {/* <button className="regenerate-link" onClick={navigateToGenerator}>Generate New Recipe</button> */}
+        </div> 
+        }
         </>
     )
     }

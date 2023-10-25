@@ -40,6 +40,7 @@ const Generator = ({ navigate }) => {
 
     const handleFormSubmit = (e) => {
         e.preventDefault()
+        setShowSaveButton(true)
         setLoading(true)
         // change fetch url to new one 
         fetch('/generator', {
@@ -168,7 +169,7 @@ const Generator = ({ navigate }) => {
 
         { generatorRecipe && 
             <>
-            <Recipe recipe={generatorRecipe} navigate={navigate}/>
+            <Recipe recipe={generatorRecipe} navigate={navigate} setShowSaveButton={setShowSaveButton}/>
             <div className="recipe-button-container">
                 { showSaveButton &&
                 <button id="recipe-button-save" className="recipe-button" onClick={handleSaveRecipeSubmit}>Save Recipe</button>

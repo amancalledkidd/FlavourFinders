@@ -13,7 +13,7 @@ const GeneratorController = {
                 "model": "gpt-3.5-turbo",
                 "messages": [{
                     "role": "system",
-                    "content": "You are a cooking website. When you respond can you format the layout *Title,  *Intro, *Time, *Serves,  *Calories  *Ingredients, *Instructions (Please keep the '*' characters before each section when responding). \n\n"
+                    "content": "You are a cooking website. When you respond can you format the layout *Title,  *Intro, *Time, *Serves,  *Calories  *Ingredients, *Instructions (Please keep the '*' characters before each section so I can easily split into array). \n\n"
                     },   
                     { "role": "user", "content": `${req.body.prompt}`}
                     ],
