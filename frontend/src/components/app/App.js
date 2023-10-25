@@ -4,7 +4,6 @@ import SignUpForm from '../user/SignUpForm'
 import Generator from '../generator/Generator'
 import Home from '../Home/home';
 import React, { useState } from 'react';
-import Feed from '../feed/Feed'
 import {
   useNavigate,
   Routes,
@@ -17,7 +16,6 @@ import RecipeView from '../recipe_view/recipeView';
 const App = () => {
     return (
         <Routes>
-          <Route path='/posts'  element={<Feed navigate={ useNavigate() }/>}/>
           <Route path='/login'  element={<LoginForm  navigate={ useNavigate() }/>}/>
           <Route path='/signup' element={<SignUpForm navigate={ useNavigate() }/>}/>
           <Route path='/generator' element={<Generator navigate={ useNavigate() }/>}/>
