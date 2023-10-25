@@ -1,19 +1,19 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "FlavourFinder",
+  "name": "FlavorFinder: Your Culinary Inspiration, Powered by AI",
   "icons": [
     {
-      "src": "flavourfinderslogo.png",
+      "src": "flavourfinderlogo.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/png"
     },
     {
-      "src": "flavourfinderslogo.png",
+      "src": "flavourfinderlogo.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "flavourfinderslogo.png",
+      "src": "flavourfinderlogo.png",
       "type": "image/png",
       "sizes": "512x512"
     }

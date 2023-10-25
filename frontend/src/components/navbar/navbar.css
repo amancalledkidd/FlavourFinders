@@ -1,8 +1,40 @@
 .navbar {
-    background-image: linear-gradient(
-    
-    #f3b242 0%,
-     #ffffff 100%
-    
-    );
+    background-color: #07bfec;
+    font-size: 150%;
+    font-family: 'Georgia', sans-serif;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 2%;
+}
+
+.links {
+    display: flex;
+    height: 10%;
+    width: 10%;
+}
+
+.brand {
+    color: white;
+    font-weight: bolder;
+    position: absolute;
+    left: 0;
+    padding-left: 2%;
+}
+
+.brand:hover {
+    transition: 0.7s;
+    transform: scale(1.5);
+}
+
+.recipe_generator:hover, .saved_recipe:hover, .logout_icon:hover, .login_icon:hover, .sign_up:hover {
+    transition: 0.7s;
+    transform: scale(2.1);
+}
+
+.recipe_generator, .saved_recipe, .logout_icon, .login_icon, .sign_up {
+    width: 30%;
+    height: 30%;
 }
