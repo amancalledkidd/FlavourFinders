@@ -52,18 +52,3 @@ describe("Generator Controller Mocking API Calls", () => {
         return GeneratorController.Create(message, mockResponse)
     }) 
 })
-
-// body: JSON.stringify({
-//     "model": "gpt-3.5-turbo",
-//     "messages": [{
-//         "role": "system",
-//         "content": "You are a cooking website. When you respond can you format the layout *Title,  *Intro, *Time, *Serves,  *Calories  *Ingredients, *Instructions (Please keep the '*' characters before each section when responding). \n\n"
-//         },   
-//         { "role": "user", "content": `${req.body.prompt}`}
-//         ],
-//     "temperature": 0.83,
-//     "max_tokens": 750,
-//     "top_p": 1,
-//     "frequency_penalty": 0,
-//     "presence_penalty": 0
-// })
