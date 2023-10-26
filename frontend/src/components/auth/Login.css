@@ -36,9 +36,11 @@ input {
 
 .login_already_account_prompt {
   text-align: left;
-  font-size: 15px;
+  font-size: 17px;
   padding-left: 15px;
+  
   display: flex;
+  font-weight: 700;
 }
 
 #password_input,

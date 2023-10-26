@@ -1,6 +1,6 @@
 .back-to-recipes-button {
     background: none;
-    color: rgba(220, 154, 69, 0.99);
+    color: #fe6e02;
     border: 0.5px solid rgb(196, 196, 196);
     padding: 20px;
     font: inherit;
@@ -11,7 +11,7 @@
 }
 
 .back-to-recipes-button:hover {
-    background-color: #0252a7;
+    background-color: rgb(11, 169, 204);
     color: white;
 }
 

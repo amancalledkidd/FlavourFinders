@@ -138,10 +138,17 @@ input[type="submit"]:hover {
     border: 2px solid #798b9f;
     box-shadow: #0252a7;
     padding: 5px;
+    padding-top: 7px;
     resize: none;
     font-size: 14px;
+    font-family: sans-serif;
+    line-height: 1.5;
+    text-align: center;
 }
 
+.generator textarea::placeholder {
+    color: #a3adb7;
+}
 
 /* Generator recipe styling */
 
@@ -169,7 +176,7 @@ input[type="submit"]:hover {
 
 
 .recipe-button:hover {
-    background-color: #0f70d8;
+    background-color: rgb(11, 169, 204);
     color: white;
     border: white;
     transition: 0.5s;

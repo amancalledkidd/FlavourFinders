@@ -139,7 +139,7 @@ const SignUpForm = ({ navigate }) => {
               </button>
             </form>
             <div className="already_account_prompt">
-              <p>
+              <p className='account-login-link'>
                 Already have an account? 
                 <Link to="/login"> Login</Link>
               </p>
