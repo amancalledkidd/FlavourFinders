@@ -92,21 +92,5 @@ describe("/recipes", () => {
             .set('Authorization', `Bearer ${token}`)
             expect(response.statusCode).toBe(200)
         });
-
-        // test('Recipe is fetched', async() => {
-        //     console.log(token.user_id)
-        //     let recipe = new Recipe({
-        //         user_id: ObjectId(token.user_id),
-        //         content: "This is test content"
-        //     });
-        //     recipe.save()
-        //     let response = await request(app)
-        //     .get('/recipes')
-        //     .set('Authorization', `Bearer ${token}`)
-        //     let recipes = response.body.recipes.map((recipe) => {
-        //         recipe.content
-        //     });
-        //     expect(recipes).toEqual(['This is test content'])
-        // })
     })
 })
