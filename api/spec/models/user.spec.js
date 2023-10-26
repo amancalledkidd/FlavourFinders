@@ -36,6 +36,7 @@ describe("User model", () => {
 
   it("can save a user", (done) => {
     const user = new User({
+      name: "test user",
       email: "someone@example.com",
       password: "password",
     });
@@ -47,6 +48,7 @@ describe("User model", () => {
         expect(err).toBeNull();
 
         expect(users[0]).toMatchObject({
+          name: "test user",
           email: "someone@example.com",
           password: "password",
         });
