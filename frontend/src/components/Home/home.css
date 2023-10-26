@@ -22,15 +22,18 @@ body {
 
 .slogan {
     margin: 0px;
-    font-family: cursive;
-    font-size: 600%;
+    font-family: 'Georgia', sans-serif;
+    font-size: 500%;
     text-align: center; 
     display: flex;
     justify-content: center; 
     align-items: center;
     height: 21vh; 
     color: transparent; /* Make the text transparent */
-    background: linear-gradient(45deg, #FFC700, #FF1100); /* Define your gradient colors and direction */
+    background: linear-gradient(
+        #000c5c 0%,
+        #05b7f8 100%
+    ); /* Define your gradient colors and direction */
     -webkit-background-clip: text; /* Clip the background to the text */
     background-clip: text;
     text-align: center;
@@ -60,10 +63,8 @@ body {
     justify-content: center; 
     align-items: center;
     line-height: 200%;
-    color: darksalmon;
+    color: #fe6e02;
     font-size: 115%;
-    font-weight: bold;
-    font-family: 'Georgia', sans-serif;
 }
 
 a:link { text-decoration: none; }
