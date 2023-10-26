@@ -25,7 +25,7 @@ app.set("port", port);
  * Connect to MongoDB
  **/
 
-var mongoDbUrl = process.env.MONGODB_URL || "mongodb://0.0.0.0/flavourfinder";
+var mongoDbUrl = process.env.MONGODB_URL || "mongodb://0.0.0.0/FlavourFinder";
 mongoose.connect(mongoDbUrl, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
