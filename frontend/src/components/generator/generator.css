@@ -176,7 +176,6 @@ input[type="submit"]:hover {
 
 }
 
-
 /* Generator radio button styling */
 .radio-main-container {
     display: flex;
@@ -268,4 +267,19 @@ input[type="submit"]:hover {
     opacity: 1;
     transform: translateX(-50%) scale(1);
 }
-
+.join-us-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: linear-gradient(
+        #000c5c 0%,
+        #05b7f8 100%
+    );
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 20px;
+    padding-top: 10px;
+}

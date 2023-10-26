@@ -1,12 +1,12 @@
 {
-  "name": "acebook",
+  "name": "flavourfinder",
   "version": "0.0.0",
-  "description": "Template for the AceBook project",
+  "description": "Template for the flavourfinder project",
   "license": "CC BY-NC-SA",
   "private": true,
   "scripts": {
     "start": "nodemon ./bin/www",
-    "start:test": "MONGODB_URL='mongodb://0.0.0.0/acebook_test' npm start",
+    "start:test": "MONGODB_URL='mongodb://0.0.0.0/testFlavourFinder' npm start",
     "test": "jest"
   },
   "engines": {
@@ -20,6 +20,7 @@
     "express-session": "^1.17.2",
     "hbs": "^4.1.0",
     "http-errors": "~1.6.3",
+    "jest-fetch-mock": "^3.0.3",
     "jsonwebtoken": "^9.0.0",
     "method-override": "^3.0.0",
     "mongodb": "^3.4.1",

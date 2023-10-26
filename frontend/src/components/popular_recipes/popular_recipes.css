@@ -12,8 +12,12 @@
 }
 
 .main-title {
-    color: rgb(11, 169, 204);
-    font-family: 'Georgia', sans-serif;
+    background: linear-gradient(
+    #000c5c 0%,
+    #05b7f8 100%);
+    -webkit-background-clip: text; /* Clip the background to the text */
+    background-clip: text;
+    color: transparent;
     font-size: 250%;
     padding-top: 7%;
 }
@@ -34,9 +38,8 @@
 }
 
 .dish-name {
-    color: darkcyan;
-    font-size: 150%;
-    font-family: 'Georgia', sans-serif;
+    color: #05b7f8;
+    font-size: 140%;
     letter-spacing: 1%;
 }
 
@@ -54,23 +57,14 @@
 
 
 .bullet-titles {
-    color: darksalmon;
+    color: #fe6e02;
     font-size: 125%;
     font-weight: bold;
-    font-family: 'Georgia', sans-serif;
 }
 
 li, .coleslaw {
     font-size: 100%;
     line-height: 20px;
     color: slategrey;
-    font-family: 'Georgia', sans-serif;
 }
 
-
-/* auto-resize & adjust grids to fit user's */
-@media screen and (max-width: 700px) {
-    .grid-container {   
-        flex-direction: column;
-    }
-}

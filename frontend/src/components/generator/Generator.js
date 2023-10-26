@@ -54,8 +54,6 @@ const Generator = ({ navigate }) => {
         e.preventDefault()
         setShowSaveButton(true)
         setLoading(true)
-        
-        // change fetch url to new one 
         fetch('/generator', {
             method: "POST",
             headers: {'Content-type': 'application/json'},
@@ -91,6 +89,7 @@ const Generator = ({ navigate }) => {
             console.log(data.token)
             console.log(data.message)
             setShowSaveButton(false)
+            setToken(data.token)
         })
     }
 
@@ -238,11 +237,17 @@ const Generator = ({ navigate }) => {
             <>
             <Recipe recipe={generatorRecipe} navigate={navigate} setShowSaveButton={setShowSaveButton}/>
             <div className="recipe-button-container">
-                { showSaveButton &&
+
+                { (showSaveButton && token) &&
                 <button id="recipe-button-save" className="recipe-button" onClick={handleSaveRecipeSubmit}>Save Recipe</button>
                 }
+
                 <button className="recipe-button" onClick={handleNewRecipe} >Generate New Recipe</button>
+                
             </div>
+            { !token && 
+                <p className="join-us-text">For extra features, please sign in or create an account!</p>
+            }
             </>
         }
         </>
