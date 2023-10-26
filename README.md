@@ -32,9 +32,6 @@ Backend
 
 
 ## 📝 Tools used for planning
-🗃 Documentation
-https://github.com/amancalledkidd/FlavourFinders/blob/main/DOCUMENTATION.md
-
 🎨 Miro: Tool used to create a blueprint for our project
 https://miro.com/app/board/uXjVNaVz6L4=/
 
