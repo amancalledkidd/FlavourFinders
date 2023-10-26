@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Recipe from "../recipe/recipe";
 import "./recipeView.css"
+import Navbar from "../navbar/Navbar";
 
 const RecipeView = ({ navigate }) => {
     const [currentRecipe, setCurrentRecipe] = useState(window.localStorage.getItem("currentRecipe"))
@@ -12,6 +13,7 @@ const RecipeView = ({ navigate }) => {
 
     return (
         <>
+        <Navbar/>
         <Recipe recipe={currentRecipe}/>
         <br/>
         <div className="back-to-recipes-container">
