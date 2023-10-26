@@ -103,12 +103,12 @@ Your ".env" file should look like the below:
 
    ```
    ; cd api
-   ; JWT_SECRET=f6d278bb34e1d0e146a80b16ec254c05 npm start
+   ; JWT_SECRET=FlavourFinder npm start
    ```
 
    ❗️ Note ❗️
    The below is an environment variable used for the JWT secret.
-   "JWT_SECRET=f6d278bb34e1d0e146a80b16ec254c05 npm start"
+   "JWT_SECRET=FlavourFinder npm start"
    
 2. Open another terminal, navigate to your `frontend` directory and start your frontend application by using the below code:
 
@@ -151,26 +151,6 @@ Run the tests in a new terminal session:
 ```bash
 # Make sure you're in the api directory
 ; cd api
-
-; JWT_SECRET=FlavourFinder npm run test
-```
-
-####  Running tests for the frontend
-
-Start the front end in a new terminal session
-
-```bash
-# Make sure you're in the frontend directory
-; cd frontend
-
-; JWT_SECRET=FlavourFinder npm start
-```
-
-Then run the tests in a new terminal session
-
-```bash
-# Make sure you're in the frontend directory
-; cd frontend
 
 ; JWT_SECRET=FlavourFinder npm run test
 ```
