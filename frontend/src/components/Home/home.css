@@ -41,11 +41,13 @@ body {
 }
 
 .popular-recipes, .generate-recipes {
-    background-color: white;
-    padding: 10%;
+    background: none;
+	border: 0.5px solid rgb(196, 196, 196);
+	padding: 20px;
+	cursor: pointer;
+	outline: inherit;
     border-radius: 25px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .border {

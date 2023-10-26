@@ -62,7 +62,7 @@
 
 input[type="submit"] {
     background: none;
-	color: rgba(220, 154, 69, 0.99);
+	color: #fe6e02;
 	border: 0.5px solid rgb(196, 196, 196);
 	padding: 20px;
 	font: inherit;
@@ -84,7 +84,7 @@ input[type="submit"]:hover {
 /* Generator title styling */
 
 .generator-field-title{
-    color: rgba(220, 154, 69, 0.99);
+    color: #fe6e02;
 }
 
 .generator-page-title {
@@ -155,7 +155,7 @@ input[type="submit"]:hover {
 
 .recipe-button{
     background: none;
-	color: rgba(220, 154, 69, 0.99);
+	color: #fe6e02;
 	border: 0.5px solid rgb(196, 196, 196);
 	padding: 20px;
 	font: inherit;
@@ -186,9 +186,8 @@ input[type="submit"]:hover {
 
 .radio-main-container h2 {
     margin: 0 0 80px 0;
-    color: rgba(220, 154, 69, 0.99);
+    color: #fe6e02;
     font-size: 30px;
-    font-family: "Raleway", sans-serif;
     font-weight: 400;
 }
 
@@ -221,7 +220,7 @@ input[type="submit"]:hover {
 
 .radio-btn > i {
     color: #ffffff;
-    background-color: rgba(220, 154, 69, 0.99);
+    background-color: #fe6e02;
     font-size: 20px;
     position: absolute;
     top: -15px;
@@ -252,15 +251,14 @@ input[type="submit"]:hover {
 }
 
 .radio-btn .button-name h3 {
-    color: rgba(220, 154, 69, 0.99);
-    font-family: "Raleway", sans-serif;
+    color: #fe6e02;
     font-size: 16px;
     font-weight: 400;
     text-transform: uppercase;
 }
 
 .custom-radio input:checked + .radio-btn {
-    border: 3px solid rgba(220, 154, 69, 0.99);
+    border: 3px solid #fe6e02;
 }
 
 .custom-radio input:checked + .radio-btn > i {
