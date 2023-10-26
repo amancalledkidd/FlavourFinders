@@ -92,8 +92,8 @@ const LogInForm = ({ navigate }) => {
           </form>
           <div className="login_already_account_prompt">
             <p>
-              Create an account
-              <Link to="/signup"> SignUp</Link>
+              Create an account: 
+              <Link to="/signup">  Sign Up</Link>
             </p>
           </div>
         </div>

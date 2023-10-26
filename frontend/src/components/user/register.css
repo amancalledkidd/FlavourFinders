@@ -139,11 +139,12 @@ label {
 
 .already_account_prompt {
   text-align: left;
-  font-size: 15px;
+  font-size: 17px;
   padding-left: 15px;
-  padding-top: 35px;
+  padding-top: 27px;
   position: absolute;
   display: flex;
+  
 }
 
 .register_form {
@@ -168,15 +169,19 @@ label {
 
 .box3 {
   display: flex;
-  font-family: Cursive;
   width: auto;
-  color: #3a405a;
   text-align: center;
   padding-right: 5%;
   /* position: relative; */
   font-size: 50px;
   filter: drop-shadow(20px 5px 17px #ffffff);
-
+  background: linear-gradient(
+        #000c5c 0%,
+        #05b7f8 100%
+    );
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
 
 }
 
@@ -190,3 +195,11 @@ label {
   display: flex;
 
 }
+
+.account-login-link {
+  font-weight: bold;
+}
+
+/* .account-login-link a {
+  color: #3d0be1;
+} */
