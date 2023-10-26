@@ -130,7 +130,7 @@ const Generator = ({ navigate }) => {
                         <option value="Any">Any</option>
                         <option value="Chinese">Chinese</option>
                         <option value="Indian">Indian</option>
-                        <option value="Philippine">Philippine</option>
+                        <option value="Filipino">Filipino</option>
                         <option value="Italian">Italian</option>
                         <option value="Japanese">Japanese</option>
                         <option value="Mexican">Mexican</option>
